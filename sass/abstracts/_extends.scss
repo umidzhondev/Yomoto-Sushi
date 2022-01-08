@@ -2,6 +2,9 @@
     color: $color-dark;
     font-size: 2rem;
     margin-bottom: 20px;
+    @include responsive(lg) {
+     font-size: 1.8rem;       
+    }
 }
 
 .cards {

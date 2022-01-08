@@ -6,6 +6,9 @@
         @include flex(space-between, center, row);
         width: 85%;
         margin-left: auto;
+        @include responsive(lg){
+         width: 100%;   
+        }
 
         .header__navigation-links {
             @include flex(center, center, row);
@@ -29,6 +32,12 @@
                         background-color: #fff;
                         color: rgb(45, 47, 45);
                     }
+
+                    @include responsive(lg){
+                        font-size: 1rem;
+                        padding: 5px 6px;
+                    }
+
                 }
             }
 

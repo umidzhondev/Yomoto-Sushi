@@ -112,6 +112,10 @@
         background-blend-mode: color;
         background-color: rgba(0, 0, 0, 0.64);
         background-attachment: fixed;
+        @include responsive(lg){
+         background-position: 43%;  
+         height: 90vh; 
+        }
         &-info{
             display: flex;
             align-items: center;
@@ -127,6 +131,13 @@
             font-weight: 500;
             margin-bottom: 30px;
             height: 5.5rem;
+            @include responsive(xl){
+                font-size: 5rem;
+            }
+            @include responsive(lg){
+                font-size: 4.5rem;
+                margin-bottom: 25px;
+            }
         }
         .typed-cursor {
             display: none;

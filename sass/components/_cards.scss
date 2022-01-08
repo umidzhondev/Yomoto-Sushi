@@ -7,6 +7,10 @@
             "D D D E E E";
         grid-gap: 15px;
         grid-template-rows: repeat(2, 360px);
+        @include responsive(lg) {
+            grid-template-rows: repeat(2,230px);
+            grid-gap: 10px;
+        }
     }
 
     &__card {
@@ -55,11 +59,15 @@
             font-size: 1.4rem;
             transition: all .4s cubic-bezier(.45, .05, .55, .95);
             ;
-
+            
             &:hover {
                 background-color: $bg-green;
                 color: $color-white;
                 box-shadow: 8px 8px 0px #20982DA1;
+            }
+            @include responsive(lg) {
+                left: 20px;
+                font-size: 1.3rem;
             }
         }
     }
@@ -211,7 +219,7 @@
         position: relative;
         border-radius: $border-radius-1;
         // margin: 12px;
-         @extend .card;
+        @extend .card;
 
         &__imgbox {
             margin-bottom: 12px;
@@ -276,7 +284,8 @@
                 width: 22px;
                 height: 22px;
                 @include flex(center, center, row);
-                &:hover{
+
+                &:hover {
                     cursor: pointer;
                 }
             }
@@ -300,7 +309,7 @@
         @include flex(center, flex-start, row);
         border-radius: 15px;
         position: relative;
-        box-shadow:0px 0px 20px 0px rgba(0, 0, 0, 0.22);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.22);
         margin-bottom: 35px;
 
         &-img {

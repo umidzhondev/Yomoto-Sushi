@@ -11,11 +11,20 @@
         @include flex(flex-start, center, row);
         flex: 2;
 
+        @include responsive(lg) {
+            flex: 3;
+        }
+
         img {
             width: 400px;
             height: 280px;
             object-fit: cover;
             border-radius: 12px;
+
+            @include responsive(lg) {
+                width: 100%;
+                height: 300px;
+            }
         }
     }
 
@@ -29,6 +38,9 @@
             font-weight: 500;
             line-height: 20px;
             margin-bottom: 20px;
+            @include responsive(lg){
+            line-height: 26px;
+            }
         }
 
         &-description {
@@ -39,22 +51,13 @@
     }
 }
 
-// * Menu section styles
-
-.menu {
-    &__title {
-        color: $color-dark;
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-}
-
 // * Recommend section styles
 
 .recommend {
     margin-top: 40px;
     margin-bottom: 40px;
-    &__card{
+
+    &__card {
         height: 430px;
     }
 
@@ -85,7 +88,7 @@
     &__content {
         @include flex(center, center, column);
         text-align: center;
-        font-family: "Rubik",sans-serif;
+        font-family: "Rubik", sans-serif;
     }
 
     &__title {

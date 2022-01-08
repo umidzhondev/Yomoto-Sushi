@@ -2,4 +2,7 @@
     max-width: 1160px;
     width: 100%;
     margin: 0 auto;
+    @include responsive(lg){
+        max-width: 90vw;
+    }
 }
