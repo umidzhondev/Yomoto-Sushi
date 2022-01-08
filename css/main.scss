@@ -1,0 +1,23 @@
+@import "../sass/abstracts/variables";
+@import "../sass/abstracts/extends";
+@import "../sass/abstracts/mixins";
+
+@import "../sass/base/resets";
+@import "../sass/base/typography";
+@import "../sass/base/utilities";
+
+@import "../sass/components/buttons";
+@import "../sass/components/cards";
+@import "../sass/components/forms";
+
+@import "../sass/layout/container";
+@import "../sass/layout/header";
+@import "../sass/layout/footer";
+@import "../sass/layout/navigation";
+
+@import "../sass/pages/home";
+@import "../sass/pages/menu";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Varela&display=swap');

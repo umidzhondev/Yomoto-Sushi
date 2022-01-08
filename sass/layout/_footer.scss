@@ -1,0 +1,66 @@
+.footer {
+    &__top{
+        padding: 18px 0;
+        width: 100%;
+        background-color: $color-green;
+        margin-top: 20px;
+    }
+    padding-bottom: 25px;
+
+    &__content {
+        @include flex(center, flex-start, column);
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    &__main {
+        @include flex(space-between, center, row);
+        width: 100%;
+
+        &-socials {
+        @include flex(flex-start, center, row);
+        align-self: flex-end;
+            img {
+                margin-left: 30px;
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    &__address {
+        img {
+            margin-bottom: 5px;
+        }
+
+        &-title {
+            font-size: 1.1rem;
+            font-weight: 400;
+            width: 50%;
+            margin-bottom: 8px;
+            font-family: "Rubik",sans-serif;
+        }
+
+        &-phone {
+            @include flex(flex-start, center, row);
+            span{
+                font-size: 18px;
+                font-weight: 500;
+                font-family: "Poppins",sans-serif;
+            }
+            i {
+                transform: rotate(90deg);
+                margin-right: 10px;
+            }
+        }
+    }
+    &__subtitle{
+        text-align: center;
+        color: rgba(0,0,0,.8);
+        font-size: 18px;
+        margin-top: 40px;
+        width: 100%;
+        font-weight: 400;
+        font-family: "Rubik",sans-serif;
+    }
+}

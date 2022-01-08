@@ -1,0 +1,92 @@
+.section--title {
+    color: $color-dark;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(2, 400px);
+    grid-gap: 25px 10px;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    box-shadow: $box-shadow;
+    padding: 6px;
+    position: relative;
+    border-radius: $border-radius-1;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card__title{
+    font-size: 1.1rem;
+    color: $color-black;
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 20px;
+}
+.card__description{
+    color: $color-secondary;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.card__price{
+    color: $color-black;
+    line-height: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.card__btn{
+    padding: 12px 24px;
+        color: $color-dark;
+        line-height: 20px;
+        border: 1.5px solid $bg-green;
+        border-radius: $border-radius-1;
+        background-color: transparent;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: "Roboto",sans-serif;
+        transition: all .5s cubic-bezier(.39,.58,.57,1);
+        &:hover{
+            background-color: $bg-green;
+            color: $color-white;
+        }
+}
+.card__additional{
+    position: absolute;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 10px;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+}
+.card__additional-item{
+    padding: 5px 10px;
+    margin: 4px 0;
+    font-size: 13px;
+    letter-spacing: .8px;
+    border-radius: $border-radius-3;
+
+    &:first-child {
+        background-color: $bg-green;
+    }
+
+    &:nth-child(2) {
+        background-color: $bg-yellow;
+    }
+}

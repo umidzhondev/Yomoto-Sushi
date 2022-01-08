@@ -1,0 +1,59 @@
+.button {
+    line-height: 16px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: $border-radius-1;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    &__header{
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.2rem;
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: transparent;
+        padding: .7rem 4rem;
+        margin-bottom: 35px;
+        @include transition(all);
+        &:hover{
+            background-color: #fff;
+            color: $color-black;
+            box-shadow: 0px 0px 9px #fff;
+        }
+
+    }
+    &__main {
+        background-color: $color-green;
+        color: $color-white;
+        padding: 14px 34px;
+        margin-top: 24px;
+        @include transition(background-color);
+        &:hover{
+            background-color: darken($color-green,5%);
+        }
+    }
+    &__recommend{
+       @extend .card__btn;
+    }
+    &__order{
+        border-radius: $border-radius-1;
+        background-color: $color-green;
+        padding: 14px 48px;
+        font-size: 20px;
+        color: $color-white;
+        margin: 0 5px;
+        @include transition(background-color);
+        &:hover{
+            background-color: darken($color-green,5%);
+        }
+    }
+    &__menu-section{
+        @extend .card__btn;
+        width: 100%;
+    }
+    &__sushiset{
+        @extend .card__btn;
+        width: 100%;
+
+    }
+}

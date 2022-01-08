@@ -1,0 +1,230 @@
+.header {
+    .navbar {
+        width: 100%;
+        @include flex(space-between, center, column);
+    }
+
+    &__brand {
+        font-family: "Rubik", sans-serif !important;
+        font-weight: 500;
+        width: 100%;
+        padding: 10px 0;
+        color: $color-primary;
+
+        .container {
+            @include flex(space-between, center, row);
+        }
+
+        &-left {
+            @include flex(space-between, center, row);
+
+        }
+
+        &-right {
+            @include flex(space-between, center, row);
+        }
+    }
+
+    &__logo {
+        @include flex(center, center, row);
+        text-align: center;
+        color: $color-black;
+        margin-right: 30px;
+    }
+
+    &__location {
+        @include flex(space-between, center, row);
+        line-height: 16px;
+        color: $color-primary;
+        i,span{
+            color: inherit;
+        }
+        i {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 17px;
+            color: $color-primary;
+        }
+    }
+
+    &__phone {
+        @include flex(space-between, center, row);
+        line-height: 16px;
+        margin-right: 20px;
+
+        i {
+            margin-right: 12px;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__language {
+        span {
+            margin-left: 4px;
+        }
+    }
+
+    &__korzinka {
+        @include flex(center, center, row);
+        color: $color-white;
+        font-size: 20px;
+        font-family: "Rubik", sans-serif;
+
+        i {
+            margin-right: 8px;
+            font-size: 20px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 8px;
+                width: 8px;
+                background-color: rgb(255, 0, 51);
+                border-radius: 50%;
+                top: -1px;
+                right: 0px;
+            }
+        }
+
+        h4 {
+            font-weight: 500;
+            @include flex(space-between, center, row);
+
+            span {
+                font-weight: 400;
+                font-size: 18px;
+
+            }
+        }
+    }
+
+    &__main {
+        width: 100%;
+        height: 100vh;
+        background-image: url("/image/home/header/header-img-3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: color;
+        background-color: rgba(0, 0, 0, 0.64);
+        background-attachment: fixed;
+        &-info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 80%;
+        }
+        &-title {
+            font-size: 5.5rem;
+            font-family: 'Bebas Neue', cursive;
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 30px;
+            height: 5.5rem;
+        }
+        .typed-cursor {
+            display: none;
+        }
+        &-phone{
+            display: flex;
+            align-self: center;
+            color: #5cff6a;
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 2.7rem;
+            h3,span{
+                font-size: inherit;
+            }
+            span{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    // &__main {
+    //     width: 100%;
+    //     height: 60vh;
+
+    //     &-slider {
+    //         height: 100%;
+    //     }
+    // }
+
+    // .swiper {
+    //     &-slide {
+    //         position: relative;
+
+    //         .imgbox {
+    //             width: 100%;
+    //             height: 100%;
+    //             position: relative;
+    //             img {
+    //                 display: block;
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 object-fit: cover;
+    //                 &::after{
+    //                     position: absolute;
+    //                 }
+    //             }
+
+    //         }
+
+    //         .header__slide-info {
+    //             position: absolute;
+    //             z-index: 999;
+    //             top: 50%;
+    //             left: 18.4%;
+    //             color: #fff;
+    //             transform: translateY(-50%);
+
+    //             h1 {
+    //                 font-size: 32px;
+    //                 text-transform: uppercase;
+    //                 margin-top: 5px;
+    //             }
+    //         }
+    //     }
+
+    //     &-button-prev {
+    //         color: rgb(255, 255, 255);
+    //         left: 90px;
+
+    //         &:after {
+    //             font-size: 65px !important;
+    //         }
+    //     }
+
+    //     &-button-next {
+    //         color: rgb(255, 255, 255);
+    //         right: 90px;
+
+    //         &:after {
+    //             font-size: 65px !important;
+    //         }
+    //     }
+
+    //     .swiper-horizontal>.swiper-pagination-bullets,
+    //     .swiper-pagination-bullets.swiper-pagination-horizontal {
+    //         left: 50% !important;
+    //         width: auto !important;
+    //         background-color: #138720;
+    //         padding: 10px;
+    //         border-radius: 6px;
+    //         transform: translateX(-50%);
+
+    //         .swiper-pagination-bullet {
+    //             width: 20px;
+    //             height: 20px;
+    //             background-color: #fff;
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,38 @@
+.header__navbar-navigation {
+    padding: 14px 0;
+    background-color: $color-green;
+
+    &__content {
+        @include flex(space-between, center, row);
+        width: 85%;
+        margin-left: auto;
+
+        .header__navigation-links {
+            @include flex(center, center, row);
+
+            li {
+                margin: 0 30px;
+
+                .active--link{
+                    background-color: #fff;
+                    color: rgb(45, 47, 45);
+                }
+
+                a {
+                    color: $color-white;
+                    font-weight: 500;
+                    font-family: "Poppins", sans-serif;
+                    transition: all .3s cubic-bezier(.47,0,.74,.71);
+                    padding: 6px 10px;
+                    border-radius: 10px;
+                    &:hover {
+                        background-color: #fff;
+                        color: rgb(45, 47, 45);
+                    }
+                }
+            }
+
+        }
+    }
+
+}

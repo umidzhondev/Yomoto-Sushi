@@ -1,0 +1,45 @@
+.menu__section{
+    padding-top: 55px;
+    margin-bottom: 35px;
+    &-title{
+        @include flex(flex-start,center, row);
+        margin-bottom: 35px;
+        font-family: "Rubik",sans-serif;
+        font-weight: 400;
+        span{
+            font-size: inherit;
+            color: $color-grey-2;
+            margin: 0 4px;
+            &:last-child{
+                color: $color-primary;
+            }
+        }
+    }
+    &-menu{
+        @include flex(center,center,row);
+        flex-wrap: wrap;
+        width:80%;
+        margin: 0 auto 15px auto;
+        &__item{
+            font-family: "Poppins",sans-serif;
+            flex-basis: 25%;
+            background-color: transparent;
+            color: $color-dark;
+            border: 1px solid $color-green;
+            padding: 9px 40px;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            text-align: center;
+            margin: 10px 15px;
+            transition: all .4s ease;
+            &:hover{
+                background-color: $color-green;
+                color: $color-white;
+            }
+        }
+        .active--menuItem{
+            background-color: $color-green;
+            color: $color-white;
+        }
+    }
+}

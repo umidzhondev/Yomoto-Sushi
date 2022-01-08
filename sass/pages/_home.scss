@@ -1,0 +1,103 @@
+// * About section styles 
+.about {
+    margin: 40px 0;
+
+    &__content {
+        @include flex(space-between, center, row);
+    }
+
+    &__img {
+        border-radius: $border-radius-1;
+        @include flex(flex-start, center, row);
+        flex: 2;
+
+        img {
+            width: 400px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
+
+    &__info {
+        margin-left: 20px;
+        @include flex(center, flex-start, column);
+        flex: 3;
+        font-family: "Rubik", sans-serif;
+
+        &-title {
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+
+        &-description {
+            line-height: 25px;
+            text-align: justify;
+            font-size: 18px;
+        }
+    }
+}
+
+// * Menu section styles
+
+.menu {
+    &__title {
+        color: $color-dark;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+}
+
+// * Recommend section styles
+
+.recommend {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    &__card{
+        height: 430px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+}
+
+// * Clients section styles
+.clients {
+    padding-bottom: 40px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+}
+
+// * Order section styles
+.order {
+    background-image: url("/image/home/order/order-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: color;
+    padding: 200px 0;
+    color: $color-white;
+
+    &__content {
+        @include flex(center, center, column);
+        text-align: center;
+        font-family: "Rubik",sans-serif;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    &__description {
+        width: 50%;
+        line-height: 26px;
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+}
