@@ -1,15 +1,24 @@
 .header {
-    .navbar {
+    &__navbar {
         width: 100%;
-        @include flex(space-between, center, column);
+        @include flex(space-between, flex-start, column);
+
+        @include responsive(xs) {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     &__brand {
         font-family: "Rubik", sans-serif !important;
         font-weight: 500;
         width: 100%;
-        padding: 10px 0;
+        padding: 15px 0;
         color: $color-primary;
+
+        @include responsive(xs) {
+            padding: 12px 0;
+        }
 
         .container {
             @include flex(space-between, center, row);
@@ -30,25 +39,66 @@
         text-align: center;
         color: $color-black;
         margin-right: 30px;
+
+        @include responsive(xs) {
+            margin-right: 0;
+            margin-left: 15px;
+        }
     }
 
     &__location {
         @include flex(space-between, center, row);
         line-height: 16px;
         color: $color-primary;
-        i,span{
+
+        @include responsive(xs) {
+            display: none;
+            color: #000;
+        }
+
+        i,
+        span {
             color: inherit;
         }
+
         i {
             font-size: 18px;
             margin-right: 10px;
+
+            @include responsive(sm) {
+                margin-right: 8px;
+            }
+
+            @include responsive(sm) {
+                font-size: 16px;
+            }
+
+            @include responsive(xs) {
+                font-size: 20px;
+            }
+            @include responsive(xxxs){
+            font-size: 18px;
+            }
         }
 
         span {
             font-weight: 500;
             font-size: 17px;
             color: $color-primary;
+
+            @include responsive(sm) {
+                font-size: 16px;
+            }
+
+            @include responsive(xs) {
+                color: #000;
+                font-size: 20px;
+            }
+            @include responsive(xxxs){
+            font-size: 18px;
+            }
         }
+
     }
 
     &__phone {
@@ -59,12 +109,85 @@
         i {
             margin-right: 12px;
             transform: rotate(90deg);
+
+            @include responsive(sm) {
+                font-size: 15px;
+            }
+
+            @include responsive(xs) {
+                margin-right: 8px;
+                font-size: 20px;
+            }
+
+            @include responsive(xxxs) {
+                font-size: 18px;
+            }
+        }
+
+        span {
+            @include responsive(sm) {
+                font-size: 15px;
+            }
+
+            @include responsive(xs) {
+                font-size: 20px;
+                font-weight: 500;
+            }
+            @include responsive(xxxs){
+            font-size: 18px;
+            }
+        }
+
+        @include responsive(xs) {
+            display: none;
         }
     }
 
     &__language {
         span {
             margin-left: 4px;
+
+            @include responsive(xs) {
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            @include responsive(xxxs) {
+                font-size: 18px;
+            }
+        }
+
+        i {
+            @include responsive(sm) {
+                font-size: 20px;
+            }
+
+            @include responsive(xxxs) {
+                font-size: 18px;
+            }
+        }
+
+        @include responsive(xs) {
+            display: none;
+        }
+    }
+
+    &__menu-close {
+        display: none;
+        position: absolute;
+        font-size: 35px;
+        color: #000;
+        top: 30px;
+        left: 30px;
+        cursor: pointer;
+        padding: 10px;
+        @include responsive(xxxs){
+         font-size: 28px;   
+        }
+        @include responsive(ss){
+         font-size: 24px;
+         top: 6px;
+         left: 20px;   
         }
     }
 
@@ -74,10 +197,26 @@
         font-size: 20px;
         font-family: "Rubik", sans-serif;
 
+        @include responsive(md) {
+            font-size: 18px;
+        }
+
+        @include responsive(xs) {
+            margin-right: 25px;
+        }
+
         i {
             margin-right: 8px;
             font-size: 20px;
             position: relative;
+
+            @include responsive(sm) {
+                font-size: 18px;
+            }
+
+            @include responsive(xs) {
+                color: #000;
+            }
 
             &::after {
                 content: "";
@@ -95,12 +234,30 @@
             font-weight: 500;
             @include flex(space-between, center, row);
 
+            @include responsive(xs) {
+                color: #000;
+            }
+
             span {
                 font-weight: 400;
                 font-size: 18px;
 
+                @include responsive(sm) {
+                    font-size: 16px;
+                }
+
+                @include responsive(xs) {
+                    font-size: 18px;
+                }
             }
         }
+    }
+
+    &__menu-icon {
+        display: none;
+        font-size: 24px;
+        color: #000;
+        cursor: pointer;
     }
 
     &__main {
@@ -112,18 +269,48 @@
         background-blend-mode: color;
         background-color: rgba(0, 0, 0, 0.64);
         background-attachment: fixed;
-        @include responsive(lg){
-         background-position: 43%;  
-         height: 90vh; 
+
+        @include responsive(lg) {
+            background-position: 43%;
+            height: 85vh;
         }
-        &-info{
+
+        @include responsive(md) {
+            background-position: 50%;
+            height: 55vh;
+        }
+
+        @include responsive(sm) {
+            height: 55vh;
+        }
+
+        @include responsive(xs) {
+            height: 55vh;
+        }
+        @include responsive(xxxs){
+         height: 50vh;   
+        }
+        @include responsive(ss){
+         height: 65vh;   
+        }
+
+        &-info {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             width: 100%;
             height: 80%;
+
+            @include responsive(lg) {
+                height: 90%;
+            }
+
+            @include responsive(xs) {
+                height: 100%;
+            }
         }
+
         &-title {
             font-size: 5.5rem;
             font-family: 'Bebas Neue', cursive;
@@ -131,18 +318,42 @@
             font-weight: 500;
             margin-bottom: 30px;
             height: 5.5rem;
-            @include responsive(xl){
+
+            @include responsive(xl) {
                 font-size: 5rem;
             }
-            @include responsive(lg){
+
+            @include responsive(lg) {
                 font-size: 4.5rem;
                 margin-bottom: 25px;
             }
+
+            @include responsive(md) {
+                font-size: 3.7rem;
+                margin-bottom: 20px;
+            }
+
+            @include responsive(sm) {
+                font-size: 3rem;
+                height: 3.2rem;
+            }
+
+            @include responsive(xs) {
+                font-size: 2.4rem;
+                height: 2.5rem;
+                margin-bottom: 15px;
+            }
+
+            @include responsive(xxs) {
+                font-size: 2.2rem;
+            }
         }
+
         .typed-cursor {
             display: none;
         }
-        &-phone{
+
+        &-phone {
             display: flex;
             align-self: center;
             color: #5cff6a;
@@ -150,10 +361,28 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             font-size: 2.7rem;
-            h3,span{
+
+            @include responsive(md) {
+                font-size: 2.3rem;
+            }
+
+            @include responsive(sm) {
+                font-size: 2rem;
+            }
+
+            @include responsive(xs) {
+                font-size: 1.5rem;
+            }
+            @include responsive(ss){
+            font-size: 1.4rem;
+            }
+
+            h3,
+            span {
                 font-size: inherit;
             }
-            span{
+
+            span {
                 margin-left: 10px;
             }
         }

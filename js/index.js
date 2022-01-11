@@ -6,8 +6,6 @@ addActive(navigationLinks, "active--link")
 const menuItems = document.querySelectorAll(".menu__section-menu__item");
 addActive(menuItems, "active--menuItem")
 
-
-
 // * Card Price Counter
 const cardDecrementers = document.querySelectorAll(".card__decrement");
 const cardIncrementers = document.querySelectorAll(".card__increment");
@@ -27,6 +25,22 @@ cardDecrementers.forEach((item, index) => {
         }
     })
 })
+
+// * Navbar
+const openBtn = document.querySelector(".header__menu-icon");
+const closeBtn = document.querySelector(".header__menu-close");
+const navbar = document.querySelector(".header__navigation-links");
+
+// ? Open Navbar
+openBtn.addEventListener('click',() => {
+    navbar.classList.add("open--navbar");
+});
+// ? Close Navbar
+closeBtn.addEventListener('click',() => {
+    navbar.classList.remove("open--navbar");
+});
+
+
 
 // * Functions
 function addActive(items, className) {

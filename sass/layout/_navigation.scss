@@ -1,41 +1,146 @@
 .header__navbar-navigation {
-    padding: 14px 0;
+    padding: 16px 0;
     background-color: $color-green;
+    width: 100%;
+    @include responsive(xs){
+        width: auto;
+        background-color: transparent;
+        padding: 11px 0;
+    }
 
     &__content {
         @include flex(space-between, center, row);
         width: 85%;
         margin-left: auto;
-        @include responsive(lg){
-         width: 100%;   
+
+        @media screen and (max-width: 1050px) {
+            width: 95%;
+        }
+
+        @include responsive(md) {
+            width: 100%;
+        }
+        @include responsive(xs){
+         padding: 0 25px;           
         }
 
         .header__navigation-links {
             @include flex(center, center, row);
+            transition: right .8s cubic-bezier(.65,.05,.36,1);
+            &.open--navbar{
+                right: 0;
+            }
+            @include responsive(xs) {
+                position: fixed;
+                z-index: 3;
+                top: 0%;
+                right: -100%;
+                flex-direction: column;
+                background-color: #fff;
+                height: 100vh;
+                justify-content: center;
+                width: 100vw;
+            }
 
             li {
                 margin: 0 30px;
 
-                .active--link{
+                @include responsive(md) {
+                    margin: 0 15px;
+                }
+
+                @media screen and (max-width: 768px) {
+                    margin: 0 12px;
+                }
+
+                @media screen and (max-width: 650px) {
+                    margin: 0 8px;
+                }
+
+                @media screen and (max-width: 600px) {
+                    margin: 0 5px;
+                }
+
+                @include responsive(xs) {
+                    margin: 7px 0;
+                }
+                @include responsive(ss){
+                    margin: 3px 0;
+                }
+
+                &:nth-child(7),
+                &:nth-child(8),
+                &:nth-child(9) {
+                    margin: 7px 0;
+                }
+
+                &:nth-child(7) {
+                    margin-top: 50px;
+                }
+
+
+                div,
+                a {
+                    @include responsive(xs) {
+                        display: block;
+                    }
+                }
+
+
+                .active--link {
                     background-color: #fff;
                     color: rgb(45, 47, 45);
+
+                    @include responsive(xs) {
+                        background-color: rgb(45, 47, 45);
+                        color: #fff;
+                    }
                 }
 
                 a {
                     color: $color-white;
                     font-weight: 500;
                     font-family: "Poppins", sans-serif;
-                    transition: all .3s cubic-bezier(.47,0,.74,.71);
+                    transition: all .3s cubic-bezier(.47, 0, .74, .71);
                     padding: 6px 10px;
                     border-radius: 10px;
+
                     &:hover {
                         background-color: #fff;
                         color: rgb(45, 47, 45);
+
+                        @include responsive(xs) {
+                            background-color: rgb(45, 47, 45);
+                            color: #fff;
+
+                            span,
+                            i {
+                                color: #fff;
+                            }
+                        }
                     }
 
-                    @include responsive(lg){
+                    @include responsive(lg) {
                         font-size: 1rem;
-                        padding: 5px 6px;
+                    }
+
+                    @include responsive(md) {
+                        font-size: 0.95rem;
+                    }
+
+                    @include responsive(sm) {
+                        font-size: 0.9rem;
+                    }
+
+                    @include responsive(xs) {
+                        font-size: 1.5rem;
+                        color: #000;
+                    }
+                    @include responsive(xxxs){
+            font-size: 1.2rem;
+                    }
+                    @include responsive(ss){
+            font-size: 1rem;
                     }
 
                 }

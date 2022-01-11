@@ -1,10 +1,11 @@
 .footer {
-    &__top{
+    &__top {
         padding: 18px 0;
         width: 100%;
         background-color: $color-green;
         margin-top: 20px;
     }
+
     padding-bottom: 25px;
 
     &__content {
@@ -17,14 +18,68 @@
         @include flex(space-between, center, row);
         width: 100%;
 
+        @include responsive(xxxs) {
+            flex-direction: column;
+            justify-content: flex-start;
+           padding-left: 15px;
+        }
+
         &-socials {
-        @include flex(flex-start, center, row);
-        align-self: flex-end;
+            @include flex(flex-start, center, row);
+            align-self: flex-end;
+
             img {
                 margin-left: 30px;
                 width: 32px;
                 height: 32px;
+
+                @include responsive(md) {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @include responsive(sm) {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                @include responsive(xxs) {
+                    margin-left: 25px;
+                }
+
+                @include responsive(xxxs){
+                    margin-left: 0;
+                    margin-right: 30px;
+                }
             }
+
+            @include responsive(lg) {
+                margin-right: 40px;
+            }
+
+            @include responsive(md) {
+                margin-right: 10px;
+            }
+
+            @include responsive(sm) {
+                margin-right: 20px;
+            }
+
+            @include responsive(xs) {
+                margin-right: 50px;
+            }
+
+            @include responsive(xxs) {
+                margin-right: 80px;
+            }
+
+            @include responsive(xxxs) {
+                margin-right: 0;
+                @include flex(flex-start, center, row);
+                width: 100%;
+                margin-top: 20px;
+            }
+
         }
     }
 
@@ -38,29 +93,73 @@
             font-weight: 400;
             width: 50%;
             margin-bottom: 8px;
-            font-family: "Rubik",sans-serif;
+            font-family: "Rubik", sans-serif;
+
+            @include responsive(md) {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+
+            @include responsive(sm) {
+                margin-bottom: 8px;
+                width: 100%;
+            }
         }
 
         &-phone {
             @include flex(flex-start, center, row);
-            span{
+
+            span {
                 font-size: 18px;
                 font-weight: 500;
-                font-family: "Poppins",sans-serif;
+                font-family: "Poppins", sans-serif;
+
+                @include responsive(sm) {
+                    font-size: 16px;
+                }
             }
+
             i {
                 transform: rotate(90deg);
                 margin-right: 10px;
+
+                @include responsive(sm) {
+                    margin-right: 7px;
+                    font-size: 16px;
+                }
             }
         }
     }
-    &__subtitle{
+
+    &__subtitle {
         text-align: center;
-        color: rgba(0,0,0,.8);
+        color: rgba(0, 0, 0, .8);
         font-size: 18px;
         margin-top: 40px;
         width: 100%;
         font-weight: 400;
-        font-family: "Rubik",sans-serif;
+        font-family: "Rubik", sans-serif;
+
+        @include responsive(lg) {
+            margin-top: 35px;
+        }
+
+        @include responsive(md) {
+            margin-top: 30px;
+            font-size: 17px;
+        }
+
+        @include responsive(sm) {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        @include responsive(xs) {
+            margin-top: 25px;
+        }
+
+        @include responsive(xxxs) {
+            margin-top: 50px;
+        }
     }
 }

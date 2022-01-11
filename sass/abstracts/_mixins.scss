@@ -50,7 +50,17 @@
   }
 
   @if $breakpoint==xxs {
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 450px) {
+      @content;
+    }
+  }
+  @if $breakpoint==xxxs {
+    @media screen and (max-width: 400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==ss {
+    @media screen and (max-width: 350px) {
       @content;
     }
   }

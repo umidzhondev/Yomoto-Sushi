@@ -2,17 +2,68 @@
     color: $color-dark;
     font-size: 2rem;
     margin-bottom: 20px;
+
     @include responsive(lg) {
-     font-size: 1.8rem;       
+        font-size: 1.8rem;
     }
+
+    @include responsive(md) {
+        font-size: 1.6rem;
+    }
+
+    @include responsive(sm) {
+        font-size: 1.45rem;
+        margin-bottom: 15px;
+    }
+
+    @include responsive(xs) {
+        font-size: 1.5rem;
+    }
+    @include responsive(xxxs){
+     margin-bottom: 20px;       
+    }
+
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    // grid-template-rows: repeat(2, 400px);
     grid-gap: 25px 10px;
     width: 100%;
+
+    @include responsive(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive(sm) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 650px) {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: 0 auto;
+        grid-gap: 15px 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 95%;
+    }
+
+    @include responsive(xs) {
+        width: 100%;
+    }
+
+    @include responsive(xxs) {
+        grid-gap: 15px 5px;
+    }
+    @include responsive(xxxs){
+     grid-template-columns: repeat(1,1fr);
+     width: 70%;       
+    }
+    @include responsive(ss){
+     width: 80%;       
+    }
 }
 
 .card {
@@ -30,55 +81,121 @@
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
-.card__title{
+
+.card__title {
     font-size: 1.1rem;
     color: $color-black;
     font-weight: 500;
     margin-bottom: 14px;
     line-height: 20px;
+
+    @include responsive(lg) {
+        font-size: 1rem;
+        line-height: 17px;
+    }
+
+    @include responsive(md) {
+        font-size: 0.9rem;
+        line-height: 15px;
+    }
+
+    @include responsive(xs) {
+        margin-bottom: 5px;
+        font-size: 0.8rem;
+    }
 }
-.card__description{
+
+.card__description {
     color: $color-secondary;
     line-height: 20px;
     font-size: 14px;
     margin-bottom: 12px;
+
+    @include responsive(xs) {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
 }
-.card__price{
+
+.card__price {
     color: $color-black;
     line-height: 20px;
     font-size: 1.5rem;
     font-weight: 400;
+
+    @include responsive(lg) {
+        font-size: 1.3rem;
+    }
+
+    @include responsive(md) {
+        font-size: 1.2rem;
+    }
+
+    @include responsive(xs) {
+        font-size: 1.1rem;
+    }
 }
-.card__btn{
+
+.card__btn {
     padding: 12px 24px;
-        color: $color-dark;
-        line-height: 20px;
-        border: 1.5px solid $bg-green;
-        border-radius: $border-radius-1;
-        background-color: transparent;
-        font-size: 1rem;
-        font-weight: 400;
-        font-family: "Roboto",sans-serif;
-        transition: all .5s cubic-bezier(.39,.58,.57,1);
-        &:hover{
-            background-color: $bg-green;
-            color: $color-white;
-        }
+    color: $color-dark;
+    line-height: 20px;
+    border: 1.5px solid $bg-green;
+    border-radius: $border-radius-1;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    transition: all .5s cubic-bezier(.39, .58, .57, 1);
+
+    &:hover {
+        background-color: $bg-green;
+        color: $color-white;
+    }
+
+    @include responsive(lg) {
+        padding: 10px 12px;
+    }
+
+    @include responsive(md) {
+        line-height: 18px;
+        padding: 11px 15px;
+    }
+
+    @include responsive(sm) {
+        line-height: 17px;
+        padding: 11px;
+    }
+
+    @include responsive(xs) {
+        padding: 10px;
+    }
+
+    @include responsive(xxs) {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
+    @include responsive(xxxs){
+     padding: 10px 17px;
+     font-size: 1rem;       
+    }
 }
-.card__additional{
+
+.card__additional {
     position: absolute;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            flex-direction: column;
-            margin: 10px;
-            height: 100%;
-            top: 0;
-            left: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+    height: 100%;
+    top: 0;
+    left: 0;
 
 }
-.card__additional-item{
+
+.card__additional-item {
     padding: 5px 10px;
     margin: 4px 0;
     font-size: 13px;
@@ -91,5 +208,9 @@
 
     &:nth-child(2) {
         background-color: $bg-yellow;
+    }
+
+    @include responsive(xs) {
+        font-size: 12px;
     }
 }

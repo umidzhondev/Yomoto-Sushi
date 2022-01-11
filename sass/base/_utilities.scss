@@ -1,0 +1,6 @@
+.hidden--item{
+    display: none !important;
+    @include responsive(xs){
+        display: block !important;
+    }
+}

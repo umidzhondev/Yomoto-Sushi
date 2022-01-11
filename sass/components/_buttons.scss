@@ -20,6 +20,22 @@
             color: $color-black;
             box-shadow: 0px 0px 9px #fff;
         }
+        @include responsive(md){
+        margin-bottom: 30px;
+        }
+        @include responsive(sm){
+         margin-bottom: 20px;
+         font-size: 1.1rem;
+         padding: 0.6rem 2.5rem;       
+        }
+        @include responsive(xs){
+           padding: 0.6rem 1.5rem;
+           font-size: 1rem;
+           margin-bottom: 15px; 
+        }
+        @include responsive(ss){
+            padding: 0.6rem 2rem;
+        }
 
     }
     &__main {
@@ -46,6 +62,23 @@
         &:hover{
             background-color: darken($color-green,5%);
         }
+        @include responsive(lg){
+        padding: 14px 36px;
+        }
+        @include responsive(md){
+        padding: 12px 32px;
+        font-size: 18px;
+        }
+        @include responsive(sm){
+       padding: 12px 20px;
+        }
+        @include responsive(xs){
+         padding: 10px 15px;
+         font-size: 16px;   
+        }
+        @include responsive(xxxs){
+         padding: 8px 14px;   
+        }
     }
     &__menu-section{
         @extend .card__btn;
@@ -53,7 +86,10 @@
     }
     &__sushiset{
         @extend .card__btn;
-        width: 100%;
-
+        width: 80%;
+        @include responsive(lg){
+            width: 100%;
+        }
+        line-height: 15px;
     }
 }

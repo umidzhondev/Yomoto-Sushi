@@ -7,9 +7,37 @@
             "D D D E E E";
         grid-gap: 15px;
         grid-template-rows: repeat(2, 360px);
+
         @include responsive(lg) {
-            grid-template-rows: repeat(2,230px);
+            grid-template-rows: repeat(2, 330px);
             grid-gap: 10px;
+        }
+
+        @include responsive(md) {
+            grid-template-rows: repeat(2, 290px);
+        }
+
+        @include responsive(sm) {
+            grid-template-rows: repeat(2, 240px);
+            grid-gap: 6px;
+        }
+
+        @include responsive(xs) {
+            grid-template-rows: repeat(3, 240px);
+            grid-gap: 8px;
+            grid-template-areas:
+                "A A B B"
+                "C C D D"
+                "E E E E";
+        }
+        @include responsive(xxxs){
+        grid-template-rows: repeat(3,200px);    
+        }
+        @include responsive(ss){
+         grid-template-rows: repeat(5,180px);   
+         grid-template-areas: 
+         "A A" "B B" "C C" "D D" "E E"
+         ;
         }
     }
 
@@ -58,16 +86,32 @@
             box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.68);
             font-size: 1.4rem;
             transition: all .4s cubic-bezier(.45, .05, .55, .95);
-            ;
-            
+
             &:hover {
                 background-color: $bg-green;
                 color: $color-white;
                 box-shadow: 8px 8px 0px #20982DA1;
+
+                @include responsive(md) {
+                    box-shadow: 6px 6px 0px #20982DA1;
+                }
             }
+
             @include responsive(lg) {
                 left: 20px;
-                font-size: 1.3rem;
+                font-size: 1.5rem;
+                bottom: 25px;
+            }
+
+            @include responsive(md) {
+                font-size: 1.2rem;
+                box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.68);
+            }
+
+            @include responsive(sm) {
+                font-size: 1rem;
+                left: 12px;
+                bottom: 20px;
             }
         }
     }
@@ -82,10 +126,47 @@
 
     &__card {
         @extend .card;
+        height: 430px;
+
+        @include responsive(lg) {
+            height: 410px;
+        }
+
+        @include responsive(md) {
+            height: 400px;
+        }
+
+        @include responsive(sm) {
+            height: 380px;
+        }
+
+        @media screen and (max-width: 650px) {
+            height: 350px;
+        }
+
+        @include responsive(xs) {
+            height: 340px;
+        }
+        @include responsive(xxxs){
+         height: 320px;   
+        }
+        @include responsive(ss){
+         height: 310px;   
+        }
 
         &-imgbox {
             margin-bottom: 12px;
             height: 180px;
+
+            @include responsive(sm) {
+                height: 160px;
+                margin-bottom: 4px;
+            }
+
+            @include responsive(xs) {
+                height: 140px;
+
+            }
 
             img {
                 @extend .card__img;
@@ -104,6 +185,10 @@
         &-info {
             padding: 12px;
             @include flex(flex-start, flex-start, column);
+
+            @include responsive(xs) {
+                padding: 8px;
+            }
         }
 
         &-title {
@@ -120,6 +205,10 @@
             bottom: 22px;
             width: 85%;
             margin: 0 auto;
+
+            @include responsive(lg) {
+                bottom: 16px;
+            }
         }
 
         &-price {
@@ -136,6 +225,8 @@
 
 .clients {
     &__card {
+        height: 250px;
+
         .clients__rating {
             i {
                 color: $color-grey;
@@ -157,10 +248,30 @@
         box-shadow: $box-shadow;
         border-radius: $border-radius-1;
 
+        @include responsive(md) {
+            padding: 10px;
+        }
+
+        @include responsive(sm) {
+            height: 240px;
+        }
+        @include responsive(xs){
+         height: 230px;
+         padding: 10px 80px;   
+        }
+        @include responsive(xxxs){
+         height: 200px;
+         padding: 10px 17px;   
+        }
+
         &-imgbox {
             width: 90px;
             height: 90px;
             margin-bottom: 15px;
+            @include responsive(xxxs){
+            width: 70px;
+            height: 70px;
+            }
 
             img {
                 width: 100%;
@@ -174,6 +285,11 @@
             color: $color-black;
             line-height: 16px;
             margin-bottom: 15px;
+
+            @include responsive(md) {
+                margin-bottom: 10px;
+                font-size: 1rem;
+            }
         }
 
         &-description {
@@ -181,6 +297,10 @@
             margin-bottom: 10px;
             letter-spacing: 0.4px;
             font-size: 15px;
+
+            @include responsive(md) {
+                font-size: 14px;
+            }
         }
     }
 
@@ -188,17 +308,37 @@
         .active--star {
             background-color: $bg-yellow;
         }
+
+        i {
+            font-size: 14px;
+        }
     }
 
     .swiper {
         padding: 0 0 60px 0;
+
+        @include responsive(md) {
+            padding: 0 0 50px 0;
+        }
 
         .swiper-pagination-bullet {
             border-radius: $border-radius-1;
             width: 18px;
             height: 18px;
             background-color: $bg-green;
+
+            @include responsive(lg) {
+                width: 15px;
+                height: 15px;
+                border-radius: 4px
+            }
         }
+    }
+    @include responsive(xs){
+     padding-bottom: 5px;       
+    }
+    @include responsive(xxxs){
+     padding-bottom: 10px;       
     }
 }
 
@@ -212,7 +352,7 @@
     }
 
     &-card {
-        height: 430px;
+        height: 440px;
         // flex-basis: 22%;
         box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.24);
         padding: 6px;
@@ -221,9 +361,40 @@
         // margin: 12px;
         @extend .card;
 
+        @include responsive(lg) {
+            height: 410px;
+        }
+
+        @include responsive(md) {
+            height: 400px;
+        }
+        @include responsive(sm){
+            height: 420px;
+        }
+
+        @include responsive(xs) {
+            height: 350px;
+        }
+        @include responsive(xxs){
+         height: 370px;   
+        }
+        @include responsive(xxxs){
+         height: 340px;   
+        }
+        
+
         &__imgbox {
             margin-bottom: 12px;
             height: 180px;
+
+            @include responsive(lg) {
+                height: 170px;
+                margin-bottom: 4px;
+            }
+
+            @include responsive(xs) {
+                height: 140px;
+            }
 
             img {
                 @extend .card__img;
@@ -241,6 +412,10 @@
         &__info {
             padding: 12px;
             @include flex(flex-start, flex-start, column);
+
+            @include responsive(xs) {
+                padding: 8px;
+            }
         }
 
         &__title {
@@ -263,6 +438,18 @@
                 width: 100%;
                 @include flex(space-between, center, row);
                 margin-bottom: 15px;
+
+                @include responsive(lg) {
+                    margin-bottom: 10px;
+                }
+
+                @include responsive(xs) {
+                    margin-bottom: 8px;
+                }
+            }
+
+            @include responsive(lg) {
+                bottom: 16px;
             }
         }
 
@@ -303,42 +490,106 @@
         @include flex(center, center, column);
         width: 80%;
         margin: 35px auto;
+
+        @include responsive(lg) {
+            width: 80vw;
+        }
+
+        @include responsive(md) {
+            width: 90%;
+        }
+
+        @include responsive(sm) {
+            width: 100%;
+            margin: 0 auto;
+        }
     }
 
     .sushiset__card {
-        @include flex(center, flex-start, row);
+        // @include flex(center, flex-start, row);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         border-radius: 15px;
         position: relative;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.22);
         margin-bottom: 35px;
 
+        @include responsive(xs) {
+            grid-template-columns: repeat(1, 90vw);
+            margin-bottom: 20px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+
         &-img {
-            flex: 3;
             width: 100%;
             height: 100%;
+            mask-border: 3px solid #222;
+
+            @include responsive(xs) {
+                height: 220px;
+            }
+            @include responsive(xxs){
+            height: 200px;
+            }
 
             img {
                 width: 100%;
                 height: 100%;
                 border-radius: 10px;
                 @extend .card__img;
+
+                @include responsive(xs) {
+                    object-fit: fill;
+                }
             }
         }
 
         &-info {
-            flex: 2;
             width: 100%;
             height: 100%;
-            padding: 20px 30px;
+            padding: 10px 30px;
+
+            @include responsive(md) {
+                padding: 10px 20px;
+            }
+
+            @include responsive(sm) {
+                padding: 10px 15px;
+            }
         }
 
         &-title {
             font-family: "Poppins", sans-serif;
+
+            @include responsive(md) {
+                font-size: 1rem;
+            }
+
+            @include responsive(sm) {
+                font-size: 0.9rem;
+            }
         }
 
         &-item {
             font-family: "Rubik", sans-serif;
             margin: 4px 0;
+
+            @include responsive(md) {
+                margin: 6px 0;
+                font-size: 0.9rem;
+            }
+
+            @include responsive(sm) {
+                margin: 5px 0;
+            }
+
+            @include responsive(xs) {
+                font-size: 0.8rem;
+            }
         }
 
         &-footer {
@@ -349,10 +600,16 @@
                 @include flex(space-between, center, row);
                 width: 90%;
                 margin-bottom: 20px;
+
+                @include responsive(sm) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            @include responsive(md) {
+                margin-top: 20px;
             }
 
         }
     }
-
-
 }
