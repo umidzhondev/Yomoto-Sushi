@@ -9,12 +9,15 @@
     }
 
     &__content {
-        @include flex(space-between, center, row);
-        width: 85%;
+        // @include flex(space-between, center, row);
+        @include flex(center, center, row);
+        // width: 85%;
+        width: 100%;
         margin-left: auto;
 
         @media screen and (max-width: 1050px) {
-            width: 95%;
+            // width: 95%;
+            width: 100%;
         }
 
         @include responsive(md) {

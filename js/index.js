@@ -11,11 +11,15 @@ const cardDecrementers = document.querySelectorAll(".card__decrement");
 const cardIncrementers = document.querySelectorAll(".card__increment");
 const cardCounts = document.querySelectorAll(".card__count")
 
+
+cardCounts.forEach(item =>item.textContent = 1)
+
 cardIncrementers.forEach((item, index) => {
     item.addEventListener("click", () => {
         +cardCounts[index].textContent++
     })
 })
+
 cardDecrementers.forEach((item, index) => {
     item.addEventListener("click", () => {
         if(+cardCounts[index].textContent == 0){

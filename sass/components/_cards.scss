@@ -241,11 +241,11 @@
             }
         }
 
-        background-color: $bg-white;
+        background-color: #fff;
         @include flex(center, center, column);
         padding: 10px 34px 18px 34px;
         text-align: center;
-        box-shadow: $box-shadow;
+        box-shadow: 0 0 8px 5px #e2e2e285;
         border-radius: $border-radius-1;
 
         @include responsive(md) {
@@ -352,9 +352,9 @@
     }
 
     &-card {
-        height: 440px;
+        height: 380px;
         // flex-basis: 22%;
-        box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16);
         padding: 6px;
         position: relative;
         border-radius: $border-radius-1;
@@ -362,26 +362,25 @@
         @extend .card;
 
         @include responsive(lg) {
-            height: 410px;
+            height: 370px;
         }
 
         @include responsive(md) {
-            height: 400px;
+            height: 350px;
         }
         @include responsive(sm){
-            height: 420px;
+            height: 370px;
         }
 
         @include responsive(xs) {
-            height: 350px;
+            height: 320px;
         }
         @include responsive(xxs){
-         height: 370px;   
+         height: 310px;   
         }
         @include responsive(xxxs){
-         height: 340px;   
+         height: 300px;   
         }
-        
 
         &__imgbox {
             margin-bottom: 12px;
@@ -437,7 +436,7 @@
             &-main {
                 width: 100%;
                 @include flex(space-between, center, row);
-                margin-bottom: 15px;
+                margin-bottom: 5px;
 
                 @include responsive(lg) {
                     margin-bottom: 10px;
@@ -463,6 +462,7 @@
 
         &__counter {
             @include flex(center, center, row);
+            display: none;
 
             .card__increment,
             .card__decrement {
@@ -471,13 +471,14 @@
                 width: 22px;
                 height: 22px;
                 @include flex(center, center, row);
-
+                
                 &:hover {
                     cursor: pointer;
                 }
             }
-
-            span {
+            
+            button {
+                background-color: #fff;
                 color: $color-secondary;
                 font-size: 1.3rem;
                 margin: 0 4px;
@@ -513,6 +514,7 @@
         position: relative;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.22);
         margin-bottom: 35px;
+
 
         @include responsive(xs) {
             grid-template-columns: repeat(1, 90vw);

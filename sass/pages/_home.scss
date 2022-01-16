@@ -182,6 +182,7 @@
     background-blend-mode: color;
     padding: 200px 0;
     color: $color-white;
+    background-position: center;
 
     @include responsive(lg) {
         padding: 170px 0;

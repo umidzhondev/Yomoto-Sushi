@@ -196,6 +196,7 @@
         color: $color-white;
         font-size: 20px;
         font-family: "Rubik", sans-serif;
+        display: none;
 
         @include responsive(md) {
             font-size: 18px;
