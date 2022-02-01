@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yomoto Sushi</title>
+    <!--* CSS FILE -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!--* CSS FILE END -->
+    <!--* FAVICON LINK -->
+    <link rel="shortcut icon" href="/image/home/header/favicon.png">
+    <!--* FAVICON LINK END -->
+    <!--* SWIPER JS - CSS FILE  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!--* SWIPER JS - CSS FILE END  -->
+    <!--* AOS JS - CSS FILE  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--* AOS JS- CSS FILE END  -->
+    <!--* FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--* FONT END-->
+    <!--* FONTAWESOME LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!--* FONTAWESOME LINK END -->
+</head>
+
+<!--* HEADER SECTION  -->
+<section class="header">
+    <div class="header__navbar">
+        <div class="header__navbar-top">
+            <div class="container">
+                <!--* HEADER BRAND LOGO  -->
+                <a href="#" class="header__logo">
+                    <img src="./image/home/header/logo-main.png" alt="image...">
+                </a>
+                <!--* HEADER BRAND LOGO  -->
+                <div class="header__user">
+                    <img src="./image/home/header/user-image.png" alt="iamge...">
+                    <div class="exit">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Exit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__navbar-nav">
+            <div class="container">
+                <div class="header__navbar-left">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="header__navbar-navigation">
+                    <!--* HEADER NAVIGATION MENUYES  -->
+                    <ul class="header__navigation-links">
+                        <li class="header__navigation-item"><a href="admin-hot-rolls.html"
+                                class="header__navigation-link active--link">Sushi</a>
+                        </li>
+                        <li class="header__navigation-item"><a href="admin-wok.html"
+                                class="header__navigation-link">Wok</a>
+                        </li>
+                        <li class="header__navigation-item"><a href="admin-desserts.html"
+                                class="header__navigation-link">Desserts</a>
+                        </li>
+                        <li class="header__navigation-item"><a href="admin-snacks.html"
+                                class="header__navigation-link">Snacks</a>
+                        </li>
+                        <li class="header__navigation-item"><a href="admin-drinks.html"
+                                class="header__navigation-link">Drinks</a>
+                        </li>
+                        <li class="header__navigation-item"><a href="admin-recommend.html"
+                                class="header__navigation-link">Recommend</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--* HEADER SECTION END -->
+
+<!--* MAIN SECTION -->
+<section class="main">
+    <div class="container">
+        <div class="main__content">
+
+            <!--* SETTINGS MODAL -->
+            <div class="settings__modal">
+                <div class="settings__modal-content">
+                    <div class="settings__modal-main">
+                        <div class="settings__modal-imgbox">
+                            <img src="./image/home/recommend/add-image.png" alt="image...">
+                            <span>Add image</span>
+                            <div class="settings__modal-shape">
+                                <span>1 + 1</span>
+                            </div>
+                        </div>
+                        <form class="settings__modal-form">
+                            <input type="text" class="settings__modal-name" placeholder="Food name">
+                            <textarea cols="30" rows="8" placeholder="Food products"></textarea>
+                            <div class="settings__modal-prices">
+                                <div class="settings__modal-price">
+                                    <input type="checkbox" name="active--price1">
+                                    <input type="text" id="active--price1" placeholder="Active price">
+                                </div>
+                                <div class="settings__modal-price">
+                                    <input type="checkbox" name="active--price2">
+                                    <input type="text" id="active--price2" placeholder="Non-active price">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <form class="settings__modal-footer">
+                        <div class="settings__modal-checks">
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>Spicy</span>
+                            </div>
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>Recommend</span>
+                            </div>
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>Vegetarian</span>
+                            </div>
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>1 + 1</span>
+                            </div>
+                        </div>
+                        <div class="settings__modal-buttons">
+                            <button type="button" class="settings__modal-button"
+                                id="settings__modal-close">Cancel</button>
+                            <button class="settings__modal-button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--* SETTINGS MODAL END-->
+            <!--* MENU SECTION MENU -->
+            <div class="menu__section-menu main__section-menu">
+                <a href="admin-hosomaki.html" class="menu__section-menu__item">Hosomaki</a>
+                <a href="admin-hot-rolls.html" class="menu__section-menu__item">Hot rolls</a>
+                <a href="admin-maki.html" class="menu__section-menu__item">Maki</a>
+                <a href="admin-nigiri.html" class="menu__section-menu__item">Nigiri</a>
+                <a href="admin-roll.html" class="menu__section-menu__item">Rolls</a>
+                <a href="admin-sushi-set.html" class="menu__section-menu__item active--menuItem">Sushi set</a>
+            </div>
+            <!--* MENU SECTION MENU END -->
+
+            <!--* MENU CARDS -->
+            <div class="menu__section-card main__section-card main__section-card__one">
+                <!--* MENU CARD IMGBOX -->
+                <div class="menu__section-card__imgbox">
+                    <img src="./image/home/recommend/add-image.png" alt="image...">
+                </div>
+                <!--* MENU CARD IMGBOX END -->
+                <button class="add__card-button">New Card</button>
+            </div>
+            <!--* MENU CARDS END -->
+
+            <!--* SUSHI SET CARDS -->
+            <div class="sushiset__cards">
+                <!--* SUSHI SET CARD -->
+
+                <div class="sushiset__card">
+                    <!--* SUSHI SET CARD IMG -->
+
+                    <div class="sushiset__card-img">
+                        <img src="./image/menu/sushi-set/sushi-set-2-min.JPG" alt="image...">
+                    </div>
+                    <!--* SUSHI SET CARD IMG END -->
+                    <!--* SUSHI SET CARD INFO -->
+
+                    <div class="sushiset__card-info">
+                        <h2 class="sushiset__card-title">SUSHI SET Nr: 1</h2>
+                        <!--* SUSHI SET CARD INFO LIST -->
+
+                        <ul class="sushiset__card-list">
+                            <li class="sushiset__card-item">
+                                1) PHILADELPHIA ROLL – 8x
+                            </li>
+                            <li class="sushiset__card-item">
+                                2)CHICKEN HOT ROLL - 8x
+
+                            </li>
+                            <li class="sushiset__card-item">
+                                3) SAKE SESAME HOT ROLL - 8x
+
+                            </li>
+                            <li class="sushiset__card-item">
+                                4) FUDZI HOT ROLL - 8x
+
+                            </li>
+                            <li class="sushiset__card-item">
+                                5) TEKKA HOT ROLL – 8x
+
+                            </li>
+
+                            <li class="sushiset__card-item">
+
+                                Set includes : 2 soy sauces, wasabi and ginger.
+                            </li>
+
+
+
+                        </ul>
+                        <!--* SUSHI SET CARD INFO LIST END -->
+                        <!--* SUSHI SET CARD INFO FOOTER -->
+
+                        <div class="sushiset__card-footer">
+                            <div class="sushiset__card-footer__main">
+                                <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
+                                <div class="main__card-button">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--* SUSHI SET CARD INFO FOOTER END -->
+
+                    </div>
+                    <!--* SUSHI SET CARD INFO END -->
+
+                </div>
+                <!--* SUSHI SET CARD END -->
+
+                <!--* SUSHI SET CARD -->
+                <div class="sushiset__card">
+                    <!--* SUSHI SET CARD IMG -->
+                    <div class="sushiset__card-img">
+                        <img src="./image/menu/sushi-set/sushi-set-4.jpg" alt="image...">
+                    </div>
+                    <!--* SUSHI SET CARD IMG END -->
+                    <!--* SUSHI SET CARD INFO -->
+                    <div class="sushiset__card-info">
+                        <h2 class="sushiset__card-title">BLACK SET Nr: 2</h2>
+                        <!--* SUSHI SET CARD INFO LIST -->
+                        <ul class="sushiset__card-list">
+                            <li class="sushiset__card-item">
+                                1) Unadzu hott roll
+                            </li>
+                            <li class="sushiset__card-item">
+                                2) Okajama
+                            </li>
+                            <li class="sushiset__card-item">
+                                3) OTA
+                            </li>
+                            <li class="sushiset__card-item">
+                                4) Kioto
+                            </li>
+                            <li class="sushiset__card-item">
+                                5) TEKKA HOT ROLL – 8x
+                            </li>
+                            <li class="sushiset__card-item">
+                                Set includes : 2 soy sauces, wasabi and ginger.
+                            </li>
+                        </ul>
+                        <!--* SUSHI SET CARD INFO LIST END -->
+                        <!--* SUSHI SET CARD INFO FOOTER -->
+                        <div class="sushiset__card-footer">
+                            <div class="sushiset__card-footer__main">
+                                <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
+                                <div class="main__card-button">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--* SUSHI SET CARD INFO FOOTER END -->
+                    </div>
+                    <!--* SUSHI SET CARD INFO END -->
+
+                </div>
+                <!--* SUSHI SET CARD END -->
+
+
+            </div>
+            <!--* SUSHI SET CARDS END -->
+
+        </div>
+    </div>
+</section>
+<!--* MAIN SECTION END -->
+
+
+
+
+<!--* JAVSCRIPT FILE  -->
+<script>
+    // * Settings Modal
+    const sushiSetCards = document.querySelector(".sushiset__cards");
+    const mainSectionCardOne = document.querySelector(".main__section-card__one");
+    const settingsModalBtns = document.querySelectorAll(".main__card-button");
+    const settingsModal = document.querySelector(".settings__modal");
+    const mainSectionMenu = document.querySelector(".main__section-menu");
+    const settingsModalCloseBtn = document.querySelector("#settings__modal-close");
+
+    // ? Settings Modal Open
+    settingsModalBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            settingsModal.classList.add("open__settings--modal");
+            sushiSetCards.classList.add("open__settings--modal");
+            mainSectionCardOne.classList.add("open__settings--modal");
+            mainSectionMenu.classList.add("open__settings--modal");
+        });
+    })
+    // ? Settings Modal Open
+    settingsModalCloseBtn.addEventListener('click', () => {
+        settingsModal.classList.remove("open__settings--modal");
+        sushiSetCards.classList.remove("open__settings--modal");
+        mainSectionCardOne.classList.remove("open__settings--modal");
+        mainSectionMenu.classList.remove("open__settings--modal");
+    });
+</script>
+<!--* JAVSCRIPT FILE END  -->
+
+
+</body>
+
+</html>

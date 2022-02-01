@@ -157,6 +157,7 @@
         &-imgbox {
             margin-bottom: 12px;
             height: 180px;
+            position: relative;
 
             @include responsive(sm) {
                 height: 160px;
@@ -352,7 +353,7 @@
     }
 
     &-card {
-        height: 380px;
+        height: 400px;
         // flex-basis: 22%;
         box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16);
         padding: 6px;
@@ -366,7 +367,7 @@
         }
 
         @include responsive(md) {
-            height: 350px;
+            height: 370px;
         }
         @include responsive(sm){
             height: 370px;
@@ -385,6 +386,7 @@
         &__imgbox {
             margin-bottom: 12px;
             height: 180px;
+            position: relative;
 
             @include responsive(lg) {
                 height: 170px;
@@ -487,131 +489,136 @@
 
     }
 
-    .sushiset__cards {
-        @include flex(center, center, column);
-        width: 80%;
-        margin: 35px auto;
+}
+.sushiset__cards {
+    @include flex(center, center, column);
+    width: 80%;
+    margin: 35px auto;
 
-        @include responsive(lg) {
-            width: 80vw;
+    @include responsive(lg) {
+        width: 80vw;
+    }
+
+    @include responsive(md) {
+        width: 90%;
+    }
+
+    @include responsive(sm) {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.sushiset__card {
+    // @include flex(center, flex-start, row);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.22);
+    margin-bottom: 35px;
+
+
+    @include responsive(xs) {
+        grid-template-columns: repeat(1, 90vw);
+        margin-bottom: 20px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+
+    &-img {
+        width: 100%;
+        height: 100%;
+        mask-border: 3px solid #222;
+
+        @include responsive(xs) {
+            height: 220px;
+        }
+        @include responsive(xxs){
+        height: 200px;
         }
 
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            @extend .card__img;
+
+            @include responsive(xs) {
+                object-fit: fill;
+            }
+        }
+    }
+
+    &-info {
+        width: 100%;
+        height: 100%;
+        padding: 10px 30px;
+
         @include responsive(md) {
-            width: 90%;
+            padding: 10px 20px;
         }
 
         @include responsive(sm) {
-            width: 100%;
-            margin: 0 auto;
+            padding: 10px 15px;
         }
     }
 
-    .sushiset__card {
-        // @include flex(center, flex-start, row);
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        border-radius: 15px;
-        position: relative;
-        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.22);
-        margin-bottom: 35px;
+    &-title {
+        font-family: "Poppins", sans-serif;
 
+        @include responsive(md) {
+            font-size: 1rem;
+        }
+
+        @include responsive(sm) {
+            font-size: 0.9rem;
+        }
+    }
+
+    &-item {
+        font-family: "Rubik", sans-serif;
+        margin: 4px 0;
+
+        @include responsive(md) {
+            margin: 6px 0;
+            font-size: 0.9rem;
+        }
+
+        @include responsive(sm) {
+            margin: 5px 0;
+        }
 
         @include responsive(xs) {
-            grid-template-columns: repeat(1, 90vw);
-            margin-bottom: 20px;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-
-        &-img {
-            width: 100%;
-            height: 100%;
-            mask-border: 3px solid #222;
-
-            @include responsive(xs) {
-                height: 220px;
-            }
-            @include responsive(xxs){
-            height: 200px;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 10px;
-                @extend .card__img;
-
-                @include responsive(xs) {
-                    object-fit: fill;
-                }
-            }
-        }
-
-        &-info {
-            width: 100%;
-            height: 100%;
-            padding: 10px 30px;
-
-            @include responsive(md) {
-                padding: 10px 20px;
-            }
-
-            @include responsive(sm) {
-                padding: 10px 15px;
-            }
-        }
-
-        &-title {
-            font-family: "Poppins", sans-serif;
-
-            @include responsive(md) {
-                font-size: 1rem;
-            }
-
-            @include responsive(sm) {
-                font-size: 0.9rem;
-            }
-        }
-
-        &-item {
-            font-family: "Rubik", sans-serif;
-            margin: 4px 0;
-
-            @include responsive(md) {
-                margin: 6px 0;
-                font-size: 0.9rem;
-            }
-
-            @include responsive(sm) {
-                margin: 5px 0;
-            }
-
-            @include responsive(xs) {
-                font-size: 0.8rem;
-            }
-        }
-
-        &-footer {
-            width: 100%;
-            margin-top: 30px;
-
-            &__main {
-                @include flex(space-between, center, row);
-                width: 90%;
-                margin-bottom: 20px;
-
-                @include responsive(sm) {
-                    margin-bottom: 15px;
-                }
-            }
-
-            @include responsive(md) {
-                margin-top: 20px;
-            }
-
+            font-size: 0.8rem;
         }
     }
+
+    &-footer {
+        width: 100%;
+        margin-top: 30px;
+
+        &__main {
+            @include flex(space-between, center, row);
+            width: 80%;
+            margin-bottom: 20px;
+
+            @include responsive(sm) {
+                margin-bottom: 15px;
+            }
+        }
+
+        @include responsive(md) {
+            margin-top: 20px;
+        }
+
+    }
+}
+.main__content .main__section-card__one{
+    width: 250px ;
+    height: 340px;
+    margin: 0 auto;
 }

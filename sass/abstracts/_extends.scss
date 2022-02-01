@@ -28,7 +28,7 @@
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 25px 10px;
+    grid-gap: 30px 15px;
     width: 100%;
 
     @include responsive(md) {

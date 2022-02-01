@@ -1,0 +1,127 @@
+.register__modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: $color-white;
+    z-index: 300;
+    @include flex(center, center, column);
+    display: none;
+    &-content {
+        @include flex(center, center, column);
+        width: 400px;
+        margin: 0 auto;
+        font-family: "Poppins", sans-serif;
+        .back__icon{
+            padding: 20px;
+            border: 1px solid $color-grey;
+            border-radius: 15px;
+            @include flex(center,center,row);
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            transition: .4s ease;
+            cursor: pointer;
+            i{
+                font-size: 22px;
+            }
+            &:hover{
+                background-color: $bg-green;
+                border: 1px solid $bg-green;
+                i{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-top {
+        width: 100%;
+        @include flex(center, center, column);
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        img {
+            margin-bottom: 5px;
+        }
+    }
+
+    &-title {
+        font-size: 1.7rem;
+    }
+
+    &-form {
+        width: 100%;
+        @include flex(center, center, column);
+
+        input {
+            width: 100%;
+            font-size: 18px;
+            padding: 12px 20px;
+            font-family: "Poppins", sans-serif;
+            border-radius: 8px;
+            border: 1px solid $color-grey;
+            margin-bottom: 20px;
+        }
+
+        &__items {
+            @include flex(space-between, center, row);
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__item {
+            @include flex(flex-start, center, row);
+            &:nth-child(2) {
+                @include flex(flex-end, center, row);
+                text-align: end;
+            }
+
+            flex: 1;
+
+            input[type="checkbox"] {
+                width: 25px !important;
+                height: 25px !important;
+                margin: 0;
+                margin-right: 15px;
+            }
+
+            span {
+                font-size: 18px;
+            }
+
+            a {
+                font-size: 18px;
+                text-decoration: 1px solid $color-grey;
+                cursor: pointer;
+
+                &:hover {
+                    color: rgb(0, 102, 255);
+                }
+            }
+        }
+    }
+    &-button{
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 20px;
+        background-color: transparent;
+        border: 1px solid $color-grey;
+        border-radius: $border-radius-1;
+        transition: .3s ease;
+        cursor: pointer;
+        &:hover,&:active{
+            color: $color-white;
+            background-color: $bg-green;
+            border: 1px solid $bg-green;
+        }
+    }
+}
+
+.register__modal.register--open{
+    display: flex;
+}
+.register__modal.register--close{
+    display: none;
+}

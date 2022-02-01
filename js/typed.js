@@ -1,7 +1,7 @@
 let typed = new Typed(".header__main-title", {
   strings: [
-    "Yomoto Sushi ",
-    "where sushi lovers meet !",
+    "Yomoto Sushi - vieta,",
+    " kur satiekas suši mīļotāji",
   ],
   typeSpeed: 50,
   backSpeed: 50,

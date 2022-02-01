@@ -5,8 +5,33 @@
         background-color: $color-green;
         margin-top: 20px;
     }
-
     padding-bottom: 25px;
+    &__right {
+        @include flex(center, center, column);
+
+        h2 {
+            font-size: 18px;
+            font-family: "Poppins", sans-serif;
+            transition: .2s ease;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,.6);
+            &:hover , &:active {
+                background-color: #202020;
+                color: #fff;
+            }
+            @include responsive(xxs){
+                order: 1;
+            }
+            @include responsive(xxxs){
+                font-size: 16px;
+            }
+        }
+        @include responsive(xxs){
+            align-items: flex-start;
+        }
+    }
 
     &__content {
         @include flex(center, flex-start, column);
@@ -18,69 +43,82 @@
         @include flex(space-between, center, row);
         width: 100%;
 
-        @include responsive(xxxs) {
+        @include responsive(xxs) {
             flex-direction: column;
             justify-content: flex-start;
-           padding-left: 15px;
+            align-items: flex-start;
+        }
+        @include responsive(xxxs) {
+            padding-left: 15px;
         }
 
         &-socials {
             @include flex(flex-start, center, row);
             align-self: flex-end;
-            a{
+
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-left: 30px;
-               @include responsive(md) {
-                   width: 30px;
-                   height: 30px;
-               }
+                margin: 15px;
+               
+                &:first-child{
+                    @include responsive(xxs){
+                        margin-left: 0;
+                    }
+                }
 
-               @include responsive(sm) {
-                   width: 25px;
-                   height: 25px;
-               }
+                @include responsive(md) {
+                    width: 30px;
+                    height: 30px;
+                }
 
-               @include responsive(xxs) {
-                   margin-left: 25px;
-               }
+                @include responsive(sm) {
+                    width: 25px;
+                    height: 25px;
+                }
 
-               @include responsive(xxxs){
-                   margin-left: 0;
-                   margin-right: 30px;
-               }
+                @include responsive(xxs) {
+                    margin-left: 25px;
+                }
+
+                @include responsive(xxxs) {
+                    margin-left: 0;
+                    margin-right: 30px;
+                }
+
                 img {
-                width: 100%;
-                height: 100%;
+                    width: 100%;
+                    height: 100%;
 
+                }
             }
-        }
+
             @include responsive(lg) {
                 margin-right: 40px;
             }
 
             @include responsive(md) {
-                margin-right: 10px;
+                margin-right: 0px;
             }
 
             @include responsive(sm) {
-                margin-right: 20px;
+                margin-right: 0px;
             }
 
             @include responsive(xs) {
-                margin-right: 50px;
+                margin-right: 0px;
             }
 
             @include responsive(xxs) {
-                margin-right: 80px;
+                margin-right: 0px;
             }
 
             @include responsive(xxxs) {
                 margin-right: 0;
                 @include flex(flex-start, center, row);
                 width: 100%;
-                margin-top: 20px;
+                margin-top: 0px;
             }
 
         }
@@ -105,6 +143,14 @@
 
             @include responsive(sm) {
                 margin-bottom: 8px;
+            }
+            @include responsive(xs) {
+                width: 100%;
+            }
+            @include responsive(xxs) {
+                width: 50%;
+            }
+            @include responsive(xxxs) {
                 width: 100%;
             }
         }
@@ -162,7 +208,7 @@
         }
 
         @include responsive(xxxs) {
-            margin-top: 50px;
+            margin-top: 30px;
         }
     }
 }

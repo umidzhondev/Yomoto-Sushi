@@ -1,54 +1,67 @@
-.menu__section{
+.menu__section {
     padding-top: 55px;
     margin-bottom: 35px;
-    @include responsive(md){
-     padding-top: 40px;
-     margin-bottom: 30px;   
+
+    @include responsive(md) {
+        padding-top: 40px;
+        margin-bottom: 30px;
     }
-    @include responsive(sm){
-     padding-top: 30px;  
+
+    @include responsive(sm) {
+        padding-top: 30px;
     }
-    @include responsive(xs){
-     padding-top: 20px;       
+
+    @include responsive(xs) {
+        padding-top: 20px;
     }
-    &-title{
-        @include flex(flex-start,center, row);
+
+    &-title {
+        @include flex(flex-start, center, row);
         margin-bottom: 35px;
-        font-family: "Rubik",sans-serif;
+        font-family: "Rubik", sans-serif;
         font-weight: 400;
-        span{
+
+        span {
             font-size: inherit;
             color: $color-grey-2;
             margin: 0 4px;
-            &:last-child{
+
+            &:last-child {
                 color: $color-primary;
             }
         }
-        @include responsive(md){
-        margin-bottom: 25px;
-        font-size: 1.4rem;
+
+        @include responsive(md) {
+            margin-bottom: 25px;
+            font-size: 1.4rem;
         }
-        @include responsive(sm){
-       font-size: 1.2rem;
-       margin-bottom: 15px;
+
+        @include responsive(sm) {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
         }
     }
-    &-menu{
-        @include flex(center,center,row);
+
+    &-menu {
+        @include flex(center, center, row);
         flex-wrap: wrap;
-        width:80%;
+        width: 80%;
         margin: 0 auto 15px auto;
-        @include responsive(md){
-        width: 95%;
+
+        @include responsive(md) {
+            width: 95%;
         }
-        @include responsive(sm){
-       width: 100%;
+
+        @include responsive(sm) {
+            width: 100%;
         }
-        @include responsive(xs){
-         margin: 0 auto 10px auto;   
+
+        @include responsive(xs) {
+            margin: 0 auto 10px auto;
         }
-        &__item{
-            font-family: "Poppins",sans-serif;
+
+        &__item {
+            font-family: "Poppins", sans-serif;
             flex-basis: 25%;
             background-color: transparent;
             color: $color-dark;
@@ -59,33 +72,51 @@
             text-align: center;
             margin: 10px 15px;
             transition: all .4s ease;
-            &:hover{
+
+            &:hover {
                 background-color: $color-green;
                 color: $color-white;
             }
-            @include responsive(md){
+
+            @include responsive(md) {
                 padding: 7px 40px;
                 font-size: 1rem;
             }
-            @include responsive(sm){
-       padding: 7px 20px;
+
+            @include responsive(sm) {
+                padding: 7px 20px;
             }
-            @include responsive(xs){
-            padding: 7px;
+
+            @include responsive(xs) {
+                padding: 7px;
             }
-            @include responsive(xxs){
+
+            @include responsive(xxs) {
                 padding: 7px 12px;
                 margin: 10px;
                 font-size: 0.9rem;
             }
-            
-            @include responsive(xxxs){
+
+            @include responsive(xxxs) {
                 flex-basis: 33%;
             }
         }
-        .active--menuItem{
+
+        .active--menuItem {
             background-color: $color-green;
             color: $color-white;
         }
+    }
+}
+
+.main__content .menu__section-menu {
+    width: 100%;
+}
+
+.main__content .menu__section-menu a {
+    flex-basis: 20%;
+
+    @include responsive(md) {
+        flex-basis: 25%;
     }
 }
