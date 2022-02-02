@@ -28,13 +28,14 @@
 
 @media screen and (max-width: 576px) {
   .section--title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   .section--title {
     margin-bottom: 20px;
+    font-size: 1.2rem;
   }
 }
 
@@ -439,6 +440,10 @@ input[type="checkbox"] {
 
 .button__main:hover {
   background-color: #4f921f;
+}
+
+.button__recommend {
+  display: none;
 }
 
 .button__order {
@@ -3207,7 +3212,7 @@ input[type="checkbox"] {
 
 @media screen and (max-width: 768px) {
   .about__info-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 18px;
     margin-bottom: 7px;
   }

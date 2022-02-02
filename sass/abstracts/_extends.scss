@@ -17,10 +17,11 @@
     }
 
     @include responsive(xs) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     @include responsive(xxxs){
-     margin-bottom: 20px;       
+     margin-bottom: 20px;
+     font-size: 1.2rem;       
     }
 
 }
