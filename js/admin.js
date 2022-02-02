@@ -4,6 +4,8 @@ const settingsModal = document.querySelector(".settings__modal");
 const mainSectionMenu = document.querySelector(".main__section-menu");
 const menuSectionCards = document.querySelector(".menu__section-cards");
 const settingsModalCloseBtn = document.querySelector("#settings__modal-close");
+const newCardButton = document.querySelector(".add__card-button");
+
 
 // ? Settings Modal Open
 settingsModalBtns.forEach((btn)=>{
@@ -22,4 +24,11 @@ settingsModalCloseBtn.addEventListener('click',() => {
         mainSectionMenu.classList.remove("open__settings--modal");
     }
     menuSectionCards.classList.remove("open__settings--modal");
+});
+newCardButton.addEventListener('click',() => {
+    settingsModal.classList.add("open__settings--modal");
+    if(mainSectionMenu){
+        mainSectionMenu.classList.add("open__settings--modal");
+    }
+    menuSectionCards.classList.add("open__settings--modal");
 });

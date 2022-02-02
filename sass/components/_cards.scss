@@ -535,10 +535,10 @@
         mask-border: 3px solid #222;
 
         @include responsive(xs) {
-            height: 220px;
+            height: 250px;
         }
         @include responsive(xxs){
-        height: 200px;
+        height: 230px;
         }
 
         img {
