@@ -1363,6 +1363,18 @@ input[type="checkbox"] {
   font-family: "Poppins", sans-serif;
 }
 
+@media screen and (max-width: 576px) {
+  .register__modal-content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .register__modal-content {
+    width: 90%;
+  }
+}
+
 .register__modal-content .back__icon {
   padding: 20px;
   border: 1px solid #83838380;
@@ -1388,8 +1400,20 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+@media screen and (max-width: 576px) {
+  .register__modal-content .back__icon {
+    padding: 15px;
+  }
+}
+
 .register__modal-content .back__icon i {
   font-size: 22px;
+}
+
+@media screen and (max-width: 400px) {
+  .register__modal-content .back__icon i {
+    font-size: 20px;
+  }
 }
 
 .register__modal-content .back__icon:hover {
@@ -1425,8 +1449,26 @@ input[type="checkbox"] {
   margin-bottom: 5px;
 }
 
+@media screen and (max-width: 400px) {
+  .register__modal-top img {
+    height: 45px;
+  }
+}
+
 .register__modal-title {
   font-size: 1.7rem;
+}
+
+@media screen and (max-width: 576px) {
+  .register__modal-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .register__modal-title {
+    font-size: 1.4rem;
+  }
 }
 
 .register__modal-form {
@@ -1454,6 +1496,18 @@ input[type="checkbox"] {
   border-radius: 8px;
   border: 1px solid #83838380;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .register__modal-form input {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .register__modal-form input {
+    padding: 10px 16px;
+  }
 }
 
 .register__modal-form__items {
@@ -1517,8 +1571,20 @@ input[type="checkbox"] {
   margin-right: 15px;
 }
 
+@media screen and (max-width: 576px) {
+  .register__modal-form__item input[type="checkbox"] {
+    margin-right: 8px;
+  }
+}
+
 .register__modal-form__item span {
   font-size: 18px;
+}
+
+@media screen and (max-width: 576px) {
+  .register__modal-form__item span {
+    font-size: 16px;
+  }
 }
 
 .register__modal-form__item a {
@@ -1526,6 +1592,12 @@ input[type="checkbox"] {
   -webkit-text-decoration: 1px solid #83838380;
           text-decoration: 1px solid #83838380;
   cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .register__modal-form__item a {
+    font-size: 16px;
+  }
 }
 
 .register__modal-form__item a:hover {
@@ -1543,6 +1615,13 @@ input[type="checkbox"] {
   -webkit-transition: .3s ease;
   transition: .3s ease;
   cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .register__modal-button {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
 }
 
 .register__modal-button:hover, .register__modal-button:active {

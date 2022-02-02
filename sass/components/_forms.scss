@@ -11,23 +11,43 @@
         width: 400px;
         margin: 0 auto;
         font-family: "Poppins", sans-serif;
-        .back__icon{
+
+        @include responsive(xs) {
+            width: 80%;
+        }
+
+        @include responsive(xxxs) {
+            width: 90%;
+        }
+
+        .back__icon {
             padding: 20px;
             border: 1px solid $color-grey;
             border-radius: 15px;
-            @include flex(center,center,row);
+            @include flex(center, center, row);
             position: absolute;
             top: 40px;
             left: 40px;
             transition: .4s ease;
             cursor: pointer;
-            i{
-                font-size: 22px;
+
+            @include responsive(xs) {
+                padding: 15px;
             }
-            &:hover{
+
+            i {
+                font-size: 22px;
+
+                @include responsive(xxxs) {
+                    font-size: 20px;
+                }
+            }
+
+            &:hover {
                 background-color: $bg-green;
                 border: 1px solid $bg-green;
-                i{
+
+                i {
                     color: #fff;
                 }
             }
@@ -43,11 +63,23 @@
 
         img {
             margin-bottom: 5px;
+
+            @include responsive(xxxs) {
+                height: 45px;
+            }
         }
     }
 
     &-title {
         font-size: 1.7rem;
+
+        @include responsive(xs) {
+            font-size: 1.5rem;
+        }
+
+        @include responsive(xxxs) {
+            font-size: 1.4rem;
+        }
     }
 
     &-form {
@@ -62,6 +94,14 @@
             border-radius: 8px;
             border: 1px solid $color-grey;
             margin-bottom: 20px;
+
+            @include responsive(xs) {
+                font-size: 16px;
+            }
+
+            @include responsive(xxxs) {
+                padding: 10px 16px;
+            }
         }
 
         &__items {
@@ -72,6 +112,7 @@
 
         &__item {
             @include flex(flex-start, center, row);
+
             &:nth-child(2) {
                 @include flex(flex-end, center, row);
                 text-align: end;
@@ -84,10 +125,18 @@
                 height: 25px !important;
                 margin: 0;
                 margin-right: 15px;
+
+                @include responsive(xs) {
+                    margin-right: 8px;
+                }
             }
 
             span {
                 font-size: 18px;
+
+                @include responsive(xs) {
+                    font-size: 16px;
+                }
             }
 
             a {
@@ -95,13 +144,18 @@
                 text-decoration: 1px solid $color-grey;
                 cursor: pointer;
 
+                @include responsive(xs) {
+                    font-size: 16px;
+                }
+
                 &:hover {
                     color: rgb(0, 102, 255);
                 }
             }
         }
     }
-    &-button{
+
+    &-button {
         width: 100%;
         text-align: center;
         padding: 12px 20px;
@@ -111,7 +165,14 @@
         border-radius: $border-radius-1;
         transition: .3s ease;
         cursor: pointer;
-        &:hover,&:active{
+
+        @include responsive(xxxs) {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        &:hover,
+        &:active {
             color: $color-white;
             background-color: $bg-green;
             border: 1px solid $bg-green;
@@ -119,9 +180,10 @@
     }
 }
 
-.register__modal.register--open{
+.register__modal.register--open {
     display: flex;
 }
-.register__modal.register--close{
+
+.register__modal.register--close {
     display: none;
 }
