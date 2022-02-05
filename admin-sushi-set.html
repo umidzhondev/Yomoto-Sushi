@@ -299,24 +299,69 @@
     const settingsModal = document.querySelector(".settings__modal");
     const mainSectionMenu = document.querySelector(".main__section-menu");
     const settingsModalCloseBtn = document.querySelector("#settings__modal-close");
+    const newCardButton = document.querySelector(".add__card-button");
+
 
     // ? Settings Modal Open
     settingsModalBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
-            settingsModal.classList.add("open__settings--modal");
-            sushiSetCards.classList.add("open__settings--modal");
-            mainSectionCardOne.classList.add("open__settings--modal");
-            mainSectionMenu.classList.add("open__settings--modal");
+            new Modal(
+                [
+                    settingsModal,
+                    sushiSetCards,
+                    mainSectionCardOne,
+                    mainSectionMenu
+                ],
+                "add",
+                "open__settings--modal").addClassName();
         });
     })
     // ? Settings Modal Open
     settingsModalCloseBtn.addEventListener('click', () => {
-        settingsModal.classList.remove("open__settings--modal");
-        sushiSetCards.classList.remove("open__settings--modal");
-        mainSectionCardOne.classList.remove("open__settings--modal");
-        mainSectionMenu.classList.remove("open__settings--modal");
+        new Modal(
+            [
+                settingsModal,
+                sushiSetCards,
+                mainSectionCardOne,
+                mainSectionMenu
+            ],
+            "remove",
+            "open__settings--modal").deleteClassName();
     });
+    newCardButton.addEventListener('click', () => {
+        new Modal(
+            [
+                settingsModal,
+                sushiSetCards,
+                mainSectionCardOne,
+                mainSectionMenu
+            ],
+            "add",
+            "open__settings--modal").addClassName();
+    });
+    class Modal {
+        constructor(elements, type, className) {
+            this.elements = elements;
+            this.type = type;
+            this.className = className;
+        }
+        addClassName() {
+            if (this.elements.length == 1) {
+                this.elements[0].classList.add(this.className)
+            } else {
+                this.elements.forEach(element => element.classList.add(this.className));
+            }
+        }
+        deleteClassName() {
+            if (this.elements.length == 1) {
+                this.elements[0].classList.remove(this.className)
+            } else {
+                this.elements.forEach(element => element.classList.remove(this.className));
+            }
+        }
+    }
 </script>
+
 <!--* JAVSCRIPT FILE END  -->
 
 
