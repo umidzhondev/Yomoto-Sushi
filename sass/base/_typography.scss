@@ -4,17 +4,21 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem ;
+    font-size: 1.5rem;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     font-weight: 500;
 }
+
 h2 {
-    font-size: 1.25rem ;
+    font-size: 1.25rem;
 }
 
 h3 {
-    font-size: 1rem ;
+    font-size: 1rem;
 }
 
 p,
@@ -23,9 +27,11 @@ span {
 }
 
 a {
-    text-decoration: none ;
-    font-size: 1.1rem ;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: $color-black;
 }
-input[type="checkbox"]{
+
+input[type="checkbox"] {
     cursor: pointer;
 }

@@ -9,7 +9,7 @@
     &__right {
         @include flex(center, center, column);
 
-        h2 {
+        .footer__for-admin {
             font-size: 18px;
             font-family: "Poppins", sans-serif;
             transition: .2s ease;

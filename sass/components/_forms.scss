@@ -5,7 +5,6 @@
     background-color: $color-white;
     z-index: 300;
     @include flex(center, center, column);
-    display: none;
     &-content {
         @include flex(center, center, column);
         width: 400px;
@@ -33,7 +32,14 @@
 
             @include responsive(xs) {
                 padding: 15px;
+                left: 22px;
             }
+            @include responsive(xxxs) {
+                padding: 13px;
+                left: 12px;
+                top: 32px;
+            }
+           
 
             i {
                 font-size: 22px;
