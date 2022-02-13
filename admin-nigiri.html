@@ -94,12 +94,16 @@
                     <div class="settings__modal-main">
                         <div class="settings__modal-imgbox">
                             <img src="./image/home/recommend/add-image.png" alt="image...">
-                            <span>Add image</span>
+                            <span class="add__image">Add image</span>
                             <div class="settings__modal-shape">
                                 <span>1 + 1</span>
+                                <div class="settings__modal-shape__price">
+                                    € <span>0.00</span>
+                                </div>
                             </div>
                         </div>
                         <form class="settings__modal-form">
+                            <input type="file" class="settings__image-input" accept="png,jpg,svg">
                             <input type="text" class="settings__modal-name" placeholder="Food name">
                             <textarea cols="30" rows="8" placeholder="Food products"></textarea>
                             <div class="settings__modal-prices">
@@ -113,6 +117,23 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div class="settings__modal-select">
+                        <h2>Select category <i class="fas fa-angle-down"></i></h2>
+                        <select name="" id="">
+                            <optgroup label="Sushi">
+                                <option value="sushi:hosomaki">Hosomaki</option>
+                                <option value="sushi:hot rolls">Hot rolls</option>
+                                <option value="sushi:maki">Maki</option>
+                                <option value="sushi:nigiri">Nigiri</option>
+                                <option value="sushi:roll">Roll</option>
+                                <option value="sushi:sushi set">Sushi set</option>
+                            </optgroup>
+                            <option value="wok">Wok</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="drinks">Drinks</option>
+                        </select>
                     </div>
                     <form class="settings__modal-footer">
                         <div class="settings__modal-checks">
@@ -134,7 +155,8 @@
                             </div>
                         </div>
                         <div class="settings__modal-buttons">
-                            <button type="button" class="settings__modal-button" id="settings__modal-close">Cancel</button>
+                            <button type="button" class="settings__modal-button"
+                                id="settings__modal-close">Delete</button>
                             <button class="settings__modal-button">Submit</button>
                         </div>
                     </form>
@@ -185,10 +207,10 @@
                              <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
-                            <div class="main__card-button">
+                            <a class="main__card-button">
                                 <i class="fas fa-cog"></i>
                                 <span>Settings</span>
-                            </div>
+                            </a>
                         </div>
                         <!--* MENU CARD FOOTER END -->
                         </div>
@@ -217,10 +239,10 @@
                              <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
-                            <div class="main__card-button">
+                            <a class="main__card-button">
                                 <i class="fas fa-cog"></i>
                                 <span>Settings</span>
-                            </div>
+                            </a>
                         </div>
                         <!--* MENU CARD FOOTER END -->
                         </div>
@@ -249,10 +271,10 @@
                              <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
-                            <div class="main__card-button">
+                            <a class="main__card-button">
                                 <i class="fas fa-cog"></i>
                                 <span>Settings</span>
-                            </div>
+                            </a>
                         </div>
                         <!--* MENU CARD FOOTER END -->
                         </div>
@@ -280,10 +302,10 @@
                              <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
-                            <div class="main__card-button">
+                            <a class="main__card-button">
                                 <i class="fas fa-cog"></i>
                                 <span>Settings</span>
-                            </div>
+                            </a>
                         </div>
                         <!--* MENU CARD FOOTER END -->
                         </div>
@@ -312,10 +334,10 @@
                              <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
-                            <div class="main__card-button">
+                            <a class="main__card-button">
                                 <i class="fas fa-cog"></i>
                                 <span>Settings</span>
-                            </div>
+                            </a>
                         </div>
                         <!--* MENU CARD FOOTER END -->
                         </div>

@@ -30,14 +30,16 @@
                 "C C D D"
                 "E E E E";
         }
-        @include responsive(xxxs){
-        grid-template-rows: repeat(3,200px);    
+
+        @include responsive(xxxs) {
+            grid-template-rows: repeat(3, 200px);
         }
-        @include responsive(ss){
-         grid-template-rows: repeat(5,180px);   
-         grid-template-areas: 
-         "A A" "B B" "C C" "D D" "E E"
-         ;
+
+        @include responsive(ss) {
+            grid-template-rows: repeat(5, 180px);
+            grid-template-areas:
+                "A A""B B""C C""D D""E E"
+            ;
         }
     }
 
@@ -147,11 +149,13 @@
         @include responsive(xs) {
             height: 340px;
         }
-        @include responsive(xxxs){
-         height: 320px;   
+
+        @include responsive(xxxs) {
+            height: 320px;
         }
-        @include responsive(ss){
-         height: 310px;   
+
+        @include responsive(ss) {
+            height: 310px;
         }
 
         &-imgbox {
@@ -256,22 +260,25 @@
         @include responsive(sm) {
             height: 240px;
         }
-        @include responsive(xs){
-         height: 230px;
-         padding: 10px 80px;   
+
+        @include responsive(xs) {
+            height: 230px;
+            padding: 10px 80px;
         }
-        @include responsive(xxxs){
-         height: 200px;
-         padding: 10px 17px;   
+
+        @include responsive(xxxs) {
+            height: 200px;
+            padding: 10px 17px;
         }
 
         &-imgbox {
             width: 90px;
             height: 90px;
             margin-bottom: 15px;
-            @include responsive(xxxs){
-            width: 70px;
-            height: 70px;
+
+            @include responsive(xxxs) {
+                width: 70px;
+                height: 70px;
             }
 
             img {
@@ -335,11 +342,13 @@
             }
         }
     }
-    @include responsive(xs){
-     padding-bottom: 5px;       
+
+    @include responsive(xs) {
+        padding-bottom: 5px;
     }
-    @include responsive(xxxs){
-     padding-bottom: 10px;       
+
+    @include responsive(xxxs) {
+        padding-bottom: 10px;
     }
 }
 
@@ -369,18 +378,21 @@
         @include responsive(md) {
             height: 370px;
         }
-        @include responsive(sm){
+
+        @include responsive(sm) {
             height: 370px;
         }
 
         @include responsive(xs) {
             height: 320px;
         }
-        @include responsive(xxs){
-         height: 310px;   
+
+        @include responsive(xxs) {
+            height: 310px;
         }
-        @include responsive(xxxs){
-         height: 300px;   
+
+        @include responsive(xxxs) {
+            height: 300px;
         }
 
         &__imgbox {
@@ -473,12 +485,12 @@
                 width: 22px;
                 height: 22px;
                 @include flex(center, center, row);
-                
+
                 &:hover {
                     cursor: pointer;
                 }
             }
-            
+
             button {
                 background-color: #fff;
                 color: $color-secondary;
@@ -490,6 +502,7 @@
     }
 
 }
+
 .sushiset__cards {
     @include flex(center, center, column);
     width: 80%;
@@ -537,8 +550,9 @@
         @include responsive(xs) {
             height: 250px;
         }
-        @include responsive(xxs){
-        height: 230px;
+
+        @include responsive(xxs) {
+            height: 230px;
         }
 
         img {
@@ -617,8 +631,85 @@
 
     }
 }
-.main__content .main__section-card__one{
-    width: 250px ;
+
+.main__content .main__section-card__one {
+    width: 250px;
     height: 340px;
     margin: 0 auto;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    @include flex(center, center, row);
+
+
+    &__content {
+        @include flex(center, center, column);
+        font-family: "Rubik", sans-serif;
+        width: 60%;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, .3);
+        margin-inline: auto;
+        padding: 40px;
+
+        @include responsive(md) {
+            width: 70%;
+        }
+
+        @include responsive(sm) {
+            width: 80%;
+        }
+
+        @include responsive(xs) {
+            width: 95%;
+            padding: 40px 10px;
+        }
+    }
+
+
+    &__status-code {
+        font-size: 7rem;
+        margin-bottom: 10px;
+
+        @include responsive(sm) {
+            font-size: 5rem;
+        }
+
+        @include responsive(xs) {
+            font-size: 4rem;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: rgba(0, 0, 0, .8);
+
+        @include responsive(sm) {
+            font-size: 1.7rem;
+        }
+
+        @include responsive(xs) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__button {
+        padding: 15px 40px;
+        background-color: rgb(0, 119, 255);
+        border: 1px solid rgb(0, 119, 255);
+        border-radius: 6px;
+        color: #fff;
+
+        @include responsive(sm) {
+            padding: 13px 30px;
+        }
+
+        @include responsive(xs) {
+            font-size: 1rem;
+        }
+    }
+
+
 }
