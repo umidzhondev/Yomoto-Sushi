@@ -54,12 +54,13 @@
                     <span>Home</span>
                 </div>
                 <div class="header__navbar-navigation">
-                      <!--* HEADER NAVIGATION MENUYES  -->
-                      <ul class="header__navigation-links">
+                    <!--* HEADER NAVIGATION MENUYES  -->
+                    <ul class="header__navigation-links">
                         <li class="header__navigation-item"><a href="admin-hosomaki.html"
                                 class="header__navigation-link active--link">Sushi</a>
                         </li>
-                        <li class="header__navigation-item"><a href="admin-wok.html" class="header__navigation-link">Wok</a>
+                        <li class="header__navigation-item"><a href="admin-wok.html"
+                                class="header__navigation-link">Wok</a>
                         </li>
                         <li class="header__navigation-item"><a href="admin-desserts.html"
                                 class="header__navigation-link">Desserts</a>
@@ -85,93 +86,95 @@
 <section class="main">
     <div class="container">
         <div class="main__content">
-
-                    <!--* SETTINGS MODAL -->
-                    <div class="settings__modal">
-                        <div class="settings__modal-content">
-                            <div class="settings__modal-main">
-                                <div class="settings__modal-imgbox">
-                                    <img src="./image/home/recommend/add-image.png" alt="image...">
-                                    <span class="add__image">Add image</span>
-                                    <div class="settings__modal-shape">
-                                        <span>1 + 1</span>
-                                        <div class="settings__modal-shape__price">
-                                            € <span>0.00</span>
-                                        </div>
-                                    </div>
+            <!--* SETTINGS MODAL -->
+            <div class="settings__modal">
+                <div class="settings__modal-content">
+                    <div class="settings__modal-main">
+                        <div class="settings__modal-imgbox">
+                            <img src="./image/home/recommend/add-image.png" alt="image...">
+                            <span class="add__image">Add image</span>
+                            <div class="settings__modal-shape">
+                                <span>1 + 1</span>
+                                <div class="settings__modal-shape__price">
+                                    € <span>0.00</span>
                                 </div>
-                                <form class="settings__modal-form">
-                                    <input type="file" class="settings__image-input" accept="png,jpg,svg">
-                                    <input type="text" class="settings__modal-name" placeholder="Food name">
-                                    <textarea cols="30" rows="8" placeholder="Food products"></textarea>
-                                    <div class="settings__modal-prices">
-                                        <div class="settings__modal-price">
-                                            <input type="checkbox" name="active--price1">
-                                            <input type="text" id="active--price1" placeholder="Active price">
-                                        </div>
-                                        <div class="settings__modal-price">
-                                            <input type="checkbox" name="active--price2">
-                                            <input type="text" id="active--price2" placeholder="Non-active price">
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
-                            <div class="settings__modal-select">
-                                <h2>Select category <i class="fas fa-angle-down"></i></h2>
-                                <select name="" id="">
-                                    <optgroup label="Sushi">
-                                        <option value="sushi:hosomaki">Hosomaki</option>
-                                        <option value="sushi:hot rolls">Hot rolls</option>
-                                        <option value="sushi:maki">Maki</option>
-                                        <option value="sushi:nigiri">Nigiri</option>
-                                        <option value="sushi:roll">Roll</option>
-                                        <option value="sushi:sushi set">Sushi set</option>
-                                    </optgroup>
-                                    <option value="wok">Wok</option>
-                                    <option value="desserts">Desserts</option>
-                                    <option value="snacks">Snacks</option>
-                                    <option value="drinks">Drinks</option>
-                                </select>
-                            </div>
-                            <form class="settings__modal-footer">
-                                <div class="settings__modal-checks">
-                                    <div class="settings__modal-check">
-                                        <input type="checkbox">
-                                        <span>Spicy</span>
-                                    </div>
-                                    <div class="settings__modal-check">
-                                        <input type="checkbox">
-                                        <span>Recommend</span>
-                                    </div>
-                                    <div class="settings__modal-check">
-                                        <input type="checkbox">
-                                        <span>Vegetarian</span>
-                                    </div>
-                                    <div class="settings__modal-check">
-                                        <input type="checkbox">
-                                        <span>1 + 1</span>
-                                    </div>
-                                </div>
-                                <div class="settings__modal-buttons">
-                                    <button type="button" class="settings__modal-button"
-                                        id="settings__modal-close">Delete</button>
-                                    <button class="settings__modal-button">Submit</button>
-                                </div>
-                            </form>
                         </div>
+                        <form class="settings__modal-form">
+                            <input type="file" class="settings__image-input" accept="png,jpg,svg">
+                            <input type="text" class="settings__modal-name" placeholder="Food name">
+                            <textarea cols="30" rows="8" placeholder="Food products"></textarea>
+                            <div class="settings__modal-prices">
+                                <div class="settings__modal-price">
+                                    <input type="checkbox" name="active--price1">
+                                    <input type="text" id="active--price1" placeholder="Active price">
+                                </div>
+                                <div class="settings__modal-price">
+                                    <input type="checkbox" name="active--price2">
+                                    <input type="text" id="active--price2" placeholder="1 + 1">
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <!--* SETTINGS MODAL END-->
-        
-          <!--* MENU SECTION MENU -->
-          <div class="menu__section-menu main__section-menu">
-            <a href="admin-hosomaki.html" class="menu__section-menu__item">Hosomaki</a>
-            <a href="admin-hot-rolls.html" class="menu__section-menu__item active--menuItem">Hot rolls</a>
-            <a href="admin-maki.html" class="menu__section-menu__item">Maki</a>
-            <a href="admin-nigiri.html" class="menu__section-menu__item">Nigiri</a>
-            <a href="admin-roll.html" class="menu__section-menu__item">Rolls</a>
-            <a href="admin-sushi-set.html" class="menu__section-menu__item">Sushi set</a>
-        </div>
-        <!--* MENU SECTION MENU END -->
+                    <div class="settings__modal-select">
+                        <h2>Select category <i class="fas fa-angle-down"></i></h2>
+                        <select name="" id="">
+                            <optgroup label="Sushi">
+                                <option value="sushi:hosomaki">Hosomaki</option>
+                                <option value="sushi:hot rolls">Hot rolls</option>
+                                <option value="sushi:maki">Maki</option>
+                                <option value="sushi:nigiri">Nigiri</option>
+                                <option value="sushi:roll">Roll</option>
+                                <option value="sushi:sushi set">Sushi set</option>
+                            </optgroup>
+                            <option value="wok">Wok</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="drinks">Drinks</option>
+                        </select>
+                    </div>
+                    <form class="settings__modal-footer">
+                        <div class="settings__modal-checks">
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>Spicy</span>
+                            </div>
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>Recommend</span>
+                            </div>
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>Vegetarian</span>
+                            </div>
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>1 + 1</span>
+                            </div>
+                            <div class="settings__modal-check">
+                                <input type="checkbox">
+                                <span>Non-active</span>
+                            </div>
+                        </div>
+                        <div class="settings__modal-buttons">
+                            <button type="button" class="settings__modal-button"
+                                id="settings__modal-close">Delete</button>
+                            <button class="settings__modal-button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--* SETTINGS MODAL END-->
+            <!--* MENU SECTION MENU -->
+            <div class="menu__section-menu main__section-menu">
+                <a href="admin-hosomaki.html" class="menu__section-menu__item">Hosomaki</a>
+                <a href="admin-hot-rolls.html" class="menu__section-menu__item active--menuItem">Hot rolls</a>
+                <a href="admin-maki.html" class="menu__section-menu__item">Maki</a>
+                <a href="admin-nigiri.html" class="menu__section-menu__item">Nigiri</a>
+                <a href="admin-roll.html" class="menu__section-menu__item">Rolls</a>
+                <a href="admin-sushi-set.html" class="menu__section-menu__item">Sushi set</a>
+            </div>
+            <!--* MENU SECTION MENU END -->
 
             <!--* MENU CARDS -->
             <div class="menu__section-cards">
@@ -185,7 +188,7 @@
                     <button class="add__card-button">New Card</button>
                 </div>
 
-                 
+
                 <!--* MENU CARD -->
                 <div class="menu__section-card">
                     <!--* MENU CARD IMGBOX -->
@@ -193,19 +196,20 @@
                         <img src="./image/menu/hot-roll/chicken-hot-roll-min.jpg" alt="image...">
                         <!--* MENU CARD ADDITIONAL -->
                         <div class="recommend__card-additional">
-                           
+
                         </div>
                         <!--* MENU CARD ADDITIONAL END -->
-                         <div class="settings__modal-shape">
-                                <span>1 + 1</span>
-                            </div>
+                        <div class="settings__modal-shape">
+                            <span>1 + 1</span>
+                        </div>
                     </div>
                     <!--* MENU CARD IMGBOX END -->
                     <!--* MENU CARD INFO -->
                     <div class="menu__section-card__info">
                         <h2 class="menu__section-card__title">CHICKEN HOT ROLL - 10x</h2>
-                        <p class="menu__section-card__description">Rice.Philadelphia Cheese.Chicken. Iceberg Lettuce.Tomatoes.Cream cheese.Sesame.Teriyaki sauce.</p>
-                           <!--* MENU CARD FOOTER -->
+                        <p class="menu__section-card__description">Rice.Philadelphia Cheese.Chicken. Iceberg
+                            Lettuce.Tomatoes.Cream cheese.Sesame.Teriyaki sauce.</p>
+                        <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
                             <a class="main__card-button">
@@ -228,16 +232,17 @@
                         <div class="recommend__card-additional">
                         </div>
                         <!--* MENU CARD ADDITIONAL END -->
-                         <div class="settings__modal-shape">
-                                <span>1 + 1</span>
-                            </div>
+                        <div class="settings__modal-shape">
+                            <span>1 + 1</span>
+                        </div>
                     </div>
                     <!--* MENU CARD IMGBOX END -->
                     <!--* MENU CARD INFO -->
                     <div class="menu__section-card__info">
                         <h2 class="menu__section-card__title">FUDZI HOT ROLL - 10x</h2>
-                        <p class="menu__section-card__description">Rice. Philadelphia Cheese. Tomatoes. Roasted Salmon. Cream cheese.</p>
-                           <!--* MENU CARD FOOTER -->
+                        <p class="menu__section-card__description">Rice. Philadelphia Cheese. Tomatoes. Roasted Salmon.
+                            Cream cheese.</p>
+                        <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
                             <a class="main__card-button">
@@ -260,9 +265,9 @@
                         <div class="recommend__card-additional">
                         </div>
                         <!--* MENU CARD ADDITIONAL END -->
-                         <div class="settings__modal-shape">
-                                <span>1 + 1</span>
-                            </div>
+                        <div class="settings__modal-shape">
+                            <span>1 + 1</span>
+                        </div>
                     </div>
                     <!--* MENU CARD IMGBOX END -->
                     <!--* MENU CARD INFO -->
@@ -270,7 +275,7 @@
                         <h2 class="menu__section-card__title">EBISINO HOT ROLL - 10x</h2>
                         <p class="menu__section-card__description">Rice. Philadelphia Cheese. Paprika.
                             Tomatoes.Tiger Shrimp.Cheese with Salmon.Teriyaka Souce</p>
-                           <!--* MENU CARD FOOTER -->
+                        <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
                             <a class="main__card-button">
@@ -293,9 +298,9 @@
                         <div class="recommend__card-additional">
                         </div>
                         <!--* MENU CARD ADDITIONAL END -->
-                         <div class="settings__modal-shape">
-                                <span>1 + 1</span>
-                            </div>
+                        <div class="settings__modal-shape">
+                            <span>1 + 1</span>
+                        </div>
                     </div>
                     <!--* MENU CARD IMGBOX END -->
                     <!--* MENU CARD INFO -->
@@ -303,7 +308,7 @@
                         <h2 class="menu__section-card__title">PHILA SENSEI HOT ROLL - 10x</h2>
                         <p class="menu__section-card__description">
                             Rice. Philadelphia cheese. Cheese with cocktail shrimp.Salmon.Teriyaki sauce.</p>
-                           <!--* MENU CARD FOOTER -->
+                        <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
                             <a class="main__card-button">
@@ -326,16 +331,17 @@
                         <div class="recommend__card-additional">
                         </div>
                         <!--* MENU CARD ADDITIONAL END -->
-                         <div class="settings__modal-shape">
-                                <span>1 + 1</span>
-                            </div>
+                        <div class="settings__modal-shape">
+                            <span>1 + 1</span>
+                        </div>
                     </div>
                     <!--* MENU CARD IMGBOX END -->
                     <!--* MENU CARD INFO -->
                     <div class="menu__section-card__info">
                         <h2 class="menu__section-card__title">PHILADELPHIA HOT ROLL – 10x</h2>
-                        <p class="menu__section-card__description">Rice. Philadelphia cheese. Avocado. Cucumber. Cheese Cream. Salmon. Teriyaki sauce.</p>
-                           <!--* MENU CARD FOOTER -->
+                        <p class="menu__section-card__description">Rice. Philadelphia cheese. Avocado. Cucumber. Cheese
+                            Cream. Salmon. Teriyaki sauce.</p>
+                        <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
                             <a class="main__card-button">
@@ -357,16 +363,17 @@
                         <div class="recommend__card-additional">
                         </div>
                         <!--* MENU CARD ADDITIONAL END -->
-                         <div class="settings__modal-shape">
-                                <span>1 + 1</span>
-                            </div>
+                        <div class="settings__modal-shape">
+                            <span>1 + 1</span>
+                        </div>
                     </div>
                     <!--* MENU CARD IMGBOX END -->
                     <!--* MENU CARD INFO -->
                     <div class="menu__section-card__info">
                         <h2 class="menu__section-card__title">SAKE CHEDDAR ROLL - 10x</h2>
-                        <p class="menu__section-card__description">Rice. Philadelphia cheese. Cucumber. Iceberg lettuce. Salmon. Cheddar cheese. Teriyaki sauce.  </p>
-                           <!--* MENU CARD FOOTER -->
+                        <p class="menu__section-card__description">Rice. Philadelphia cheese. Cucumber. Iceberg lettuce.
+                            Salmon. Cheddar cheese. Teriyaki sauce. </p>
+                        <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
                             <a class="main__card-button">
@@ -389,16 +396,17 @@
                         <div class="recommend__card-additional">
                         </div>
                         <!--* MENU CARD ADDITIONAL END -->
-                         <div class="settings__modal-shape">
-                                <span>1 + 1</span>
-                            </div>
+                        <div class="settings__modal-shape">
+                            <span>1 + 1</span>
+                        </div>
                     </div>
                     <!--* MENU CARD IMGBOX END -->
                     <!--* MENU CARD INFO -->
                     <div class="menu__section-card__info">
                         <h2 class="menu__section-card__title">SAKE SESAME HOT ROLL - 10x</h2>
-                        <p class="menu__section-card__description">Rice. Philadelphia Cheese. Cucumber. Salmon. Cheese with cocktail shrimp. Teriyaki sauce.</p>
-                           <!--* MENU CARD FOOTER -->
+                        <p class="menu__section-card__description">Rice. Philadelphia Cheese. Cucumber. Salmon. Cheese
+                            with cocktail shrimp. Teriyaki sauce.</p>
+                        <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
                             <a class="main__card-button">
@@ -421,16 +429,17 @@
                         <div class="recommend__card-additional">
                         </div>
                         <!--* MENU CARD ADDITIONAL END -->
-                         <div class="settings__modal-shape">
-                                <span>1 + 1</span>
-                            </div>
+                        <div class="settings__modal-shape">
+                            <span>1 + 1</span>
+                        </div>
                     </div>
                     <!--* MENU CARD IMGBOX END -->
                     <!--* MENU CARD INFO -->
                     <div class="menu__section-card__info">
                         <h2 class="menu__section-card__title">SAKE TOBI SMOKE ROLL - 10x</h2>
-                        <p class="menu__section-card__description">Rice. Philadelphia cheese. Avocado. Tobico. Salmon. Teriyaki sauce.</p>
-                           <!--* MENU CARD FOOTER -->
+                        <p class="menu__section-card__description">Rice. Philadelphia cheese. Avocado. Tobico. Salmon.
+                            Teriyaki sauce.</p>
+                        <!--* MENU CARD FOOTER -->
                         <div class="menu__section-card__footer">
                             <h2 class="menu__section-card__price">€ <span>0.00</span></h2>
                             <a class="main__card-button">
@@ -445,9 +454,9 @@
                 <!--* MENU CARD END -->
 
 
-                
 
-           
+
+
             </div>
             <!--* MENU CARDS END -->
 
