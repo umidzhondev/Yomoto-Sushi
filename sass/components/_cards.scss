@@ -469,6 +469,17 @@
         &__price {
             @extend .card__price;
 
+            .non-active--price{
+                text-decoration: 2px line-through rgb(250, 45, 45);
+                font-style: italic;
+                font-family: "Poppins",sans-serif;
+
+            }
+            
+            .active--price{
+                font-family: "Poppins",sans-serif;
+            }
+
             span {
                 @extend .card__price;
             }

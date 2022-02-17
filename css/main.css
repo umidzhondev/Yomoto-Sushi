@@ -1092,6 +1092,17 @@ input[type="checkbox"] {
   }
 }
 
+.menu__section-card__price .non-active--price {
+  -webkit-text-decoration: 2px line-through #fa2d2d;
+          text-decoration: 2px line-through #fa2d2d;
+  font-style: italic;
+  font-family: "Poppins",sans-serif;
+}
+
+.menu__section-card__price .active--price {
+  font-family: "Poppins",sans-serif;
+}
+
 .menu__section-card__counter {
   display: -webkit-box;
   display: -ms-flexbox;
