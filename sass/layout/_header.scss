@@ -428,6 +428,7 @@
     &__user{
         @include flex(center,center,row);
         .exit{
+            cursor: pointer;
             @include flex(center,center,row);
             margin-left: 25px;
             span{

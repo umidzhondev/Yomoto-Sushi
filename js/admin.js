@@ -5,6 +5,11 @@ const mainSectionMenu = document.querySelector(".main__section-menu");
 const menuSectionCards = document.querySelector(".menu__section-cards");
 const settingsModalCloseBtn = document.querySelector("#settings__modal-close");
 const newCardButton = document.querySelector(".add__card-button");
+const exitBtn = document.querySelector(".exit");
+
+exitBtn.addEventListener('click',() => {
+    window.location = "index.html"
+});
 
 
 // ? Settings Modal Open

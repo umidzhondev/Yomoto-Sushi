@@ -89,6 +89,7 @@
     font-weight: 500;
     margin-bottom: 14px;
     line-height: 20px;
+    word-wrap: anywhere;
 
     @include responsive(lg) {
         font-size: 1rem;
@@ -111,6 +112,9 @@
     line-height: 20px;
     font-size: 14px;
     margin-bottom: 12px;
+    height: 60px;
+    overflow: hidden auto;
+    word-wrap: anywhere;
 
     @include responsive(xs) {
         font-size: 13px;

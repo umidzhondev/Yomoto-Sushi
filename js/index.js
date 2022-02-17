@@ -50,10 +50,6 @@ orderBtn.addEventListener('click',() => {
     console.log("Working...");
 });
 
-
-
-
-
 // * Functions
 function addActive(items, className) {
     items.forEach(link => {
