@@ -43,12 +43,7 @@ closeBtn.addEventListener('click',() => {
     navbar.classList.remove("open--navbar");
 });
 
-// ? Telephone
-const orderBtn = document.querySelector(".order__btn");
-orderBtn.addEventListener('click',() => {
-    window.href = "tel:0555737787";
-    console.log("Working...");
-});
+
 
 // * Functions
 function addActive(items, className) {
