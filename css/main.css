@@ -1096,11 +1096,11 @@ input[type="checkbox"] {
   -webkit-text-decoration: 2px line-through #fa2d2d;
           text-decoration: 2px line-through #fa2d2d;
   font-style: italic;
-  font-family: "Poppins",sans-serif;
+  font-family: "Roboto",sans-serif;
 }
 
 .menu__section-card__price .active--price {
-  font-family: "Poppins",sans-serif;
+  font-family: "Roboto",sans-serif;
 }
 
 .menu__section-card__counter {
